@@ -28,7 +28,7 @@ class LoginPage extends StatelessWidget {
 
   Future<void> login(BuildContext context) async {
     try {
-      var url = Uri.parse("https://192.168.1.5/localconnect/login.php");
+      var url = Uri.parse("https://127.0.0.1/localconnect/login.php");
       var response = await http.post(url, body: {
         "username": _usernameController.text,
         "password": _passwordController.text,
@@ -57,6 +57,14 @@ class LoginPage extends StatelessWidget {
       }
     } catch (e) {
       // Handle exceptions
+      Fluttertoast.showToast(
+        msg: "Error during login: $e",
+        toastLength: Toast.LENGTH_SHORT,
+        gravity: ToastGravity.CENTER,
+        backgroundColor: Colors.red,
+        textColor: Colors.white,
+        fontSize: 16.0,
+      );
       logger.e('Error during login: $e');
     }
   }
@@ -106,8 +114,8 @@ class LoginPage extends StatelessWidget {
             ElevatedButton(
               onPressed: () {
                 // TODO: Implement login functionality
-                String username = _usernameController.text;
-                String password = _passwordController.text;
+                //String username = _usernameController.text;
+                //String password = _passwordController.text;
                 login(context);
 
               },
