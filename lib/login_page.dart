@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:http/http.dart' as http;
 import 'package:logger/logger.dart';
-import 'package:ruth_and_jerry/WelcomeScreen.dart';
+import 'package:ruth_and_jerry/welcome.dart';
 
 void main() {
   runApp(const MyApp());
