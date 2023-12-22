@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'package:http/http.dart' as http;
 
 void main() {
   runApp(const MyApp());
@@ -20,6 +20,14 @@ class LoginPage extends StatelessWidget {
   final TextEditingController _usernameController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
 
+  Future login () async {
+    var url = "http://192.168.1.5/localconnect/login.php";
+    var response = await http.post(url, body: {
+      "username": _usernameController.text,
+      "password": _passwordController.text,
+    });
+  }
+
   LoginPage({super.key});
 
   @override
@@ -35,13 +43,17 @@ class LoginPage extends StatelessWidget {
           children: [
             TextField(
               controller: _usernameController,
-              decoration: const InputDecoration(labelText: 'Username/Email'),
+              decoration: const InputDecoration(labelText: 'Username/Email', prefixIcon: Icon(
+                  Icons.person
+                )
+              ),
             ),
             const SizedBox(height: 16),
             TextField(
               controller: _passwordController,
               obscureText: true,
-              decoration: const InputDecoration(labelText: 'Password'),
+              decoration: const InputDecoration(labelText: 'Password',
+              prefixIcon: Icon(Icons.security)),
             ),
             const SizedBox(height: 16),
             Row(
