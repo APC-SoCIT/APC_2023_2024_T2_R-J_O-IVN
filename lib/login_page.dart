@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
+import 'package:logger/logger.dart';
 
 void main() {
   runApp(const MyApp());
@@ -19,14 +20,30 @@ class MyApp extends StatelessWidget {
 class LoginPage extends StatelessWidget {
   final TextEditingController _usernameController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
+  var logger = Logger();
+
 
   Future<void> login() async {
-    var url = "https://localhost/localconnect/login.php";
-    var response = await http.post(url, body: {
-      "username": _usernameController.text,
-      "password": _passwordController.text,
-    });
+    try {
+      var url = Uri.parse("https://192.168.1.5/localconnect/login.php");
+      var response = await http.post(url, body: {
+        "username": _usernameController.text,
+        "password": _passwordController.text,
+      });
+
+      if (response.statusCode == 200) {
+        // Successful response
+        logger.i('Login successful. Response: ${response.body}');
+      } else {
+        // Handle non-200 status codes
+        logger.e('Login failed. Status code: ${response.statusCode}');
+      }
+    } catch (e) {
+      // Handle exceptions
+      logger.e('Error during login: $e');
+    }
   }
+
 
   LoginPage({super.key});
 
