@@ -20,8 +20,8 @@ class LoginPage extends StatelessWidget {
   final TextEditingController _usernameController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
 
-  Future login () async {
-    var url = "https://192.168.1.5/localconnect/login.php";
+  Future<void> login() async {
+    var url = "https://localhost/localconnect/login.php";
     var response = await http.post(url, body: {
       "username": _usernameController.text,
       "password": _passwordController.text,
