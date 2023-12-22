@@ -1,6 +1,9 @@
+import 'dart:convert';
 import 'package:flutter/material.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 import 'package:http/http.dart' as http;
 import 'package:logger/logger.dart';
+import 'package:ruth_and_jerry/WelcomeScreen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -20,22 +23,36 @@ class MyApp extends StatelessWidget {
 class LoginPage extends StatelessWidget {
   final TextEditingController _usernameController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
-  var logger = Logger();
+  final logger = Logger();
 
 
-  Future<void> login() async {
+  Future<void> login(BuildContext context) async {
     try {
       var url = Uri.parse("https://192.168.1.5/localconnect/login.php");
       var response = await http.post(url, body: {
         "username": _usernameController.text,
         "password": _passwordController.text,
       });
-
+      var data = json.decode(response.body);
+      if (data != "success") {
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => WelcomeScreen()),
+        );
+      }
       if (response.statusCode == 200) {
         // Successful response
         logger.i('Login successful. Response: ${response.body}');
       } else {
         // Handle non-200 status codes
+        Fluttertoast.showToast(
+            msg: "This is Center Short Toast",
+            toastLength: Toast.LENGTH_SHORT,
+            gravity: ToastGravity.CENTER,
+            backgroundColor: Colors.red,
+            textColor: Colors.white,
+            fontSize: 16.0
+        );
         logger.e('Login failed. Status code: ${response.statusCode}');
       }
     } catch (e) {
@@ -79,7 +96,7 @@ class LoginPage extends StatelessWidget {
                 TextButton(
                   onPressed: () {
                     // TODO: Implement Forgot Password functionality
-                    print('Forgot Password pressed');
+
                   },
                   child: const Text('Forgot Password?'),
                 ),
@@ -91,7 +108,8 @@ class LoginPage extends StatelessWidget {
                 // TODO: Implement login functionality
                 String username = _usernameController.text;
                 String password = _passwordController.text;
-                print('Username/Email: $username, Password: $password');
+                login(context);
+
               },
               child: const Text('Login'),
             ),
