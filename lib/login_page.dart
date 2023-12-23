@@ -27,45 +27,59 @@ class LoginPage extends StatelessWidget {
 
 
   Future<void> login(BuildContext context) async {
-    try {
-      var url = Uri.parse("https://127.0.0.1/localconnect/login.php");
-      var response = await http.post(url, body: {
-        "username": _usernameController.text,
-        "password": _passwordController.text,
-      });
-      var data = json.decode(response.body);
-      if (data != "success") {
-        Navigator.push(
-          context,
-          MaterialPageRoute(builder: (context) => WelcomeScreen()),
-        );
-      }
-      if (response.statusCode == 200) {
-        // Successful response
-        logger.i('Login successful. Response: ${response.body}');
-      } else {
-        // Handle non-200 status codes
-        Fluttertoast.showToast(
-            msg: "This is Center Short Toast",
-            toastLength: Toast.LENGTH_SHORT,
-            gravity: ToastGravity.CENTER,
-            backgroundColor: Colors.red,
-            textColor: Colors.white,
-            fontSize: 16.0
-        );
-        logger.e('Login failed. Status code: ${response.statusCode}');
-      }
-    } catch (e) {
-      // Handle exceptions
+    if (_usernameController.text == "" || _passwordController.text == "") {
       Fluttertoast.showToast(
-        msg: "Error during login: $e",
+        msg: "All fields are blank! ",
         toastLength: Toast.LENGTH_SHORT,
         gravity: ToastGravity.CENTER,
         backgroundColor: Colors.red,
         textColor: Colors.white,
         fontSize: 16.0,
       );
-      logger.e('Error during login: $e');
+    }
+    else {
+      try {
+        var url = Uri.parse("https://192.168.1.1:80/localconnect/login.php");
+        print(url);
+        var response = await http.post(url, body: {
+          "username": _usernameController.text,
+          "password": _passwordController.text,
+        });
+        var data = json.decode(response.body);
+        if (data != "success") {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => WelcomeScreen()),
+          );
+        }
+
+        if (response.statusCode == 200) {
+          // Successful response
+          logger.i('Login successful. Response: ${response.body}');
+        } else {
+          // Handle non-200 status codes
+          Fluttertoast.showToast(
+              msg: "This is Center Short Toast",
+              toastLength: Toast.LENGTH_SHORT,
+              gravity: ToastGravity.CENTER,
+              backgroundColor: Colors.red,
+              textColor: Colors.white,
+              fontSize: 16.0
+          );
+          logger.e('Login failed. Status code: ${response.statusCode}');
+        }
+      } catch (e) {
+        // Handle exceptions
+        Fluttertoast.showToast(
+          msg: "Error during login: $e",
+          toastLength: Toast.LENGTH_SHORT,
+          gravity: ToastGravity.CENTER,
+          backgroundColor: Colors.red,
+          textColor: Colors.white,
+          fontSize: 16.0,
+        );
+        logger.e('Error during login: $e');
+      }
     }
   }
 
