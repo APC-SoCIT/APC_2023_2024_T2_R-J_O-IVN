@@ -5,6 +5,7 @@ import 'package:http/http.dart' as http;
 import 'package:logger/logger.dart';
 import 'package:ruth_and_jerry/welcome.dart';
 
+
 void main() {
   runApp(const MyApp());
 }
@@ -36,35 +37,61 @@ class LoginPage extends StatelessWidget {
         textColor: Colors.white,
         fontSize: 16.0,
       );
-    }
-    else {
+    } else {
       try {
-        var url = Uri.parse("https://192.168.1.1:80/localconnect/login.php");
-        print(url);
+        var url = Uri.parse("http://127.0.0.1/localconnect/login.php");
         var response = await http.post(url, body: {
           "username": _usernameController.text,
           "password": _passwordController.text,
         });
-        var data = json.decode(response.body);
-        if (data != "success") {
-          Navigator.push(
-            context,
-            MaterialPageRoute(builder: (context) => WelcomeScreen()),
-          );
-        }
 
+        // Check if the response is successful (status code 200)
         if (response.statusCode == 200) {
-          // Successful response
-          logger.i('Login successful. Response: ${response.body}');
-        } else {
-          // Handle non-200 status codes
-          Fluttertoast.showToast(
-              msg: "This is Center Short Toast",
+          try {
+            // Attempt to decode the JSON response
+            var data = json.decode(response.body);
+
+            // Check if the response is "success"
+            if (data == "success") {
+              // Navigate to the WelcomeScreen on successful login
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const WelcomeScreen()),
+              );
+              logger.i('Login successful. Response: ${response.body}');
+            } else {
+              // Handle non-"success" response
+              Fluttertoast.showToast(
+                msg: "Login failed: $data",
+                toastLength: Toast.LENGTH_SHORT,
+                gravity: ToastGravity.CENTER,
+                backgroundColor: Colors.red,
+                textColor: Colors.white,
+                fontSize: 16.0,
+              );
+              logger.e('Login failed. Response: $data');
+            }
+          } catch (e) {
+            // Handle JSON decoding error
+            Fluttertoast.showToast(
+              msg: "Error decoding JSON: $e",
               toastLength: Toast.LENGTH_SHORT,
               gravity: ToastGravity.CENTER,
               backgroundColor: Colors.red,
               textColor: Colors.white,
-              fontSize: 16.0
+              fontSize: 16.0,
+            );
+            logger.e('Error decoding JSON: $e');
+          }
+        } else {
+          // Handle non-200 status codes
+          Fluttertoast.showToast(
+            msg: "Login failed. Status code: ${response.statusCode}",
+            toastLength: Toast.LENGTH_SHORT,
+            gravity: ToastGravity.CENTER,
+            backgroundColor: Colors.red,
+            textColor: Colors.white,
+            fontSize: 16.0,
           );
           logger.e('Login failed. Status code: ${response.statusCode}');
         }
@@ -82,6 +109,7 @@ class LoginPage extends StatelessWidget {
       }
     }
   }
+
 
 
   LoginPage({super.key});

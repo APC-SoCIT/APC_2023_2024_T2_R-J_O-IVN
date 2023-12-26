@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class RegisterScreen extends StatelessWidget {
-  const RegisterScreen({Key? key}) : super(key: key);
+  const RegisterScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -9,8 +9,8 @@ class RegisterScreen extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Register Screen'),
       ),
-      body: Center(
-        child: const Text('This is the Register Screen'),
+      body: const Center(
+        child: Text('This is the Register Screen'),
       ),
     );
   }
