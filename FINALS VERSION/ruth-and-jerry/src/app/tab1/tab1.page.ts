@@ -10,6 +10,9 @@ import { ExploreContainerComponent } from '../explore-container/explore-containe
   standalone: true,
   imports: [IonicModule,IonHeader, IonToolbar, IonTitle, IonContent, ExploreContainerComponent],
 })
-export class Tab1Page {
+export class Tab1Page {buttonClicked(buttonLabel: string) {
+  console.log(`Button clicked: ${buttonLabel}`);
+  // You can add your logic here
+}
   constructor() {}
 }
