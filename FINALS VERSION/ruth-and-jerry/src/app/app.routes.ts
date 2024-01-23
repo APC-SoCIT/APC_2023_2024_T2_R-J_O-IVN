@@ -25,5 +25,14 @@ export const routes: Routes = [
     path: 'settings',
     loadComponent: () => import('./settings/settings.page').then( m => m.SettingsPage)
   },
+  {
+    path: 'fresh-selections',
+    loadComponent: () => import('./fresh-selections/fresh-selections.page').then( m => m.FreshSelectionsPage)
+  },  {
+    path: 'sales-report',
+    loadComponent: () => import('./sales-report/sales-report.page').then( m => m.SalesReportPage)
+  },
+
+
   
 ];
