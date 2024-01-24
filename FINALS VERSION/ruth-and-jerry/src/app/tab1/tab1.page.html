@@ -1,5 +1,11 @@
 <ion-header [translucent]="true" >
   <ion-toolbar>
+    <ion-buttons slot="end">
+      <ion-button  size="large" color="success" href="/settings">
+        <ion-icon name="settings-sharp"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
     <ion-title>
       Home
     </ion-title>
@@ -14,7 +20,6 @@
   </ion-header>
 
 <div>
-  <ion-button href="/settings"><ion-icon name="settings"></ion-icon></ion-button>
   </div>
   <div class="ion-text-center centered-container">
     <ion-img src="assets/icon/RNJ.png" style="width: 60%; height: auto; display: block; margin: 0 auto;" class="lower-image"></ion-img>
@@ -23,7 +28,7 @@
  <!-- Four Buttons -->
  <ion-row class="ion-justify-content-center ion-margin-top lower-buttons">
   <ion-button expand="full" size="large" shape="round" color="success"(click)="buttonClicked('Button 1')" href="/product-inventory"><ion-icon name="apps-sharp" slot="start"></ion-icon> Product Inventory</ion-button>
-  <ion-button expand="full" size="large" shape="round" color="success"(click)="buttonClicked('Button 2')" href="/customer-order"><ion-icon name="newspaper-outline" slot="start"></ion-icon> Customer Orders</ion-button>
+  <ion-button expand="full" size="large" shape="round" color="success"(click)="buttonClicked('Button 2')" href="/customer-orders"><ion-icon name="newspaper-outline" slot="start"></ion-icon> Customer Orders</ion-button>
 </ion-row>
 <ion-row class="ion-justify-content-center ion-margin-top">
   <ion-button expand="full" size="large" shape="round" color="success"(click)="buttonClicked('Button 3')" href="/sales-report"><ion-icon name="analytics-outline" slot="start"></ion-icon> Sales Report</ion-button>
