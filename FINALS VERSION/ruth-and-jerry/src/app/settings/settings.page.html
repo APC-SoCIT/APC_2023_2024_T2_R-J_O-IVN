@@ -10,4 +10,45 @@
       <ion-title size="large">Settings</ion-title>
     </ion-toolbar>
   </ion-header>
+
+  <ion-card-content color="light">
+    <ion-list>
+      <ion-item>
+        <ion-thumbnail slot="start">
+          <img src="https://ionicframework.com/docs/img/demos/thumbnail.svg" />
+        </ion-thumbnail>
+        <ion-card-header>
+        <ion-label><ion-card-title>Ruth Altea</ion-card-title></ion-label>
+        <ion-label><ion-card-subtitle>Admin</ion-card-subtitle></ion-label>
+      </ion-card-header>
+      </ion-item>
+    </ion-list>
+ </ion-card-content>
+    
+  <ion-content color="light">
+    <ion-list [inset]="true">
+      <ion-item>
+      <ion-select label="Language" placeholder="English">
+        <ion-select-option value="english">English</ion-select-option>
+        <ion-select-option value="tagalog">Tagalog</ion-select-option>
+      </ion-select>
+    </ion-item>
+      <ion-item>
+        <ion-select label="Location" placeholder="Home 1">
+          <ion-select-option value="home1">Home 1</ion-select-option>
+          <ion-select-option value="home2">Home 2</ion-select-option>
+          <ion-select-option value="home3">Home 3</ion-select-option>
+        </ion-select>      
+      </ion-item>
+      <ion-item>
+        <ion-label>Policies<ion-button fill="clear"><ion-icon name="caret-forward-outline"></ion-icon></ion-button></ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-label>Help<ion-button fill="clear"><ion-icon name="caret-forward-outline"></ion-icon></ion-button></ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-label>Feedback<ion-button fill="clear"><ion-icon name="caret-forward-outline"></ion-icon></ion-button></ion-label>
+      </ion-item>
+    </ion-list>
+  </ion-content>
 </ion-content>
