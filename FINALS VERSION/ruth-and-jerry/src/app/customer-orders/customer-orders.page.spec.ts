@@ -1,17 +1,60 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { CustomerOrdersPage } from './customer-orders.page';
+import { Component } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { ToastController } from '@ionic/angular';
 
-describe('CustomerOrdersPage', () => {
-  let component: CustomerOrdersPage;
-  let fixture: ComponentFixture<CustomerOrdersPage>;
+@Component({
+  selector: 'app-customer-orders',
+  templateUrl: 'customer-orders.page.html',
+  styleUrls: ['customer-orders.page.scss'],
+})
+export class CustomerOrdersPage {
+  customerOrders: any = [];
+  newOrder: any = {
+    customer_name: '',
+    order_details: '',
+  };
 
-  beforeEach(async(() => {
-    fixture = TestBed.createComponent(CustomerOrdersPage);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  }));
+  constructor(private http: HttpClient, private toastController: ToastController) {
+    this.fetchCustomerOrders();
+  }
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
-});
+  fetchCustomerOrders() {
+    const apiUrl = 'http://your-php-backend/api.php';
+
+    this.http.get(apiUrl).subscribe((data: any) => {
+      this.customerOrders = data;
+    });
+  }
+
+  async addOrder() {
+    const apiUrl = 'http://your-php-backend/api.php';
+
+    this.http.post(apiUrl, this.newOrder).subscribe(
+      (response: any) => {
+        this.presentToast(response.message);
+        this.fetchCustomerOrders();
+        this.resetNewOrder();
+      },
+      (error) => {
+        console.error('Error adding order:', error);
+        this.presentToast('Error adding order');
+      }
+    );
+  }
+
+  resetNewOrder() {
+    this.newOrder = {
+      customer_name: '',
+      order_details: '',
+    };
+  }
+
+  async presentToast(message: string) {
+    const toast = await this.toastController.create({
+      message: message,
+      duration: 2000,
+      position: 'bottom',
+    });
+    toast.present();
+  }
+}

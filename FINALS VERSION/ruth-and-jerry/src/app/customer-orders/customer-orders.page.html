@@ -11,3 +11,29 @@
     </ion-toolbar>
   </ion-header>
 </ion-content>
+
+<ion-content>
+  <ion-list>
+    <ion-label>
+      <h2>Order Customer name</h2>
+      <p>Order Details</p>
+    </ion-label>
+  </ion-list>
+</ion-content>
+<!--Customer orders page-->
+<ion-card>
+  <ion-card-header>
+    Add New Order
+  </ion-card-header>
+  <ion-card-content>
+    <ion-item>
+    <ion-label position="floating">Einnads Kitchenette</ion-label>
+    <ion-input [(ngModel)]="newOrder.order_details" required></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Order Details</ion-label>
+      <ion-input [(ngModel)]="newOrder.order_details" required></ion-input>
+    </ion-item>
+    <ion-button expand="full" (click)="addOrder()">Add ORder</ion-button>
+  </ion-card-content>
+</ion-card>
