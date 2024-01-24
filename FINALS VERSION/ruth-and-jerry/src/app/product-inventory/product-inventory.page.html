@@ -1,28 +1,130 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>product-inventory</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button fill="outline"size="large" color="success" default-href="#">
+      </ion-back-button>
+    </ion-buttons>
+
+    <ion-buttons slot="end">
+      <ion-button  size="large" color="success" href="/settings">
+        <ion-icon name="settings-sharp"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+    <ion-title>Product </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
+  <ion-row>
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">product-inventory</ion-title>
+      <ion-title size="large">Product Inventory</ion-title>
     </ion-toolbar>
   </ion-header>
-</ion-content>
-
-<ion-card>
-  <img src="https://pngteam.com/images/broccoli-png-1024x768_31047d97_transparent_20281b.png.png" />
+   <!-- vegetables 1-->
+   <ion-col style="width: 30%; height: 50%;">
+  <ion-card >
+  <img src="assets/vegetables/broccoli.png" style="width: 50%; height: auto; display: block; margin: 0 auto;" class="lower-image"/>
   <ion-card-header>
-    <ion-card-title>Potato</ion-card-title>
-    <ion-card-subtitle>Shell Life: </ion-card-subtitle>
+    <ion-card-title style="align-items: center; font-size: 36px; font-family: 'Raleway', sans-serif;font-weight: bold;"><br>Brocolli</ion-card-title>
   </ion-card-header>
 
-  <ion-card-content>
-    <b>P100 / kg</b> 
-  </ion-card-content>
-  <ion-card-content>
-    <ion-button shape="round">Change</ion-button>
-  </ion-card-content>
+  <ion-card-content style="display: flex; align-items: center; justify-content: space-between; align-items: center; font-size: 16px; font-family: 'Raleway', sans-serif; font-weight: bold;">
+    <b>20 Pieces</b> 
+    <ion-button slot="end" size="large" shape="round"color="success"><ion-icon name="add-circle-outline"></ion-icon></ion-button>
+    </ion-card-content>
+  </ion-card>
+   </ion-col>
+<!-- vegetables 2-->
+   <ion-col style="width: 30%; height: 50%;">
+  <ion-card>
+    <img src="assets/vegetables/tomatoes.png" style="width: 48%; height: auto; display: block; margin: 0 auto;" class="lower-image"/>
+    <ion-card-header>
+      <ion-card-title style="align-items: center; font-size: 36px; font-family: 'Raleway', sans-serif;font-weight: bold;"><br>Tomatoes</ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content style="display: flex; align-items: center; justify-content: space-between; align-items: center; font-size: 16px; font-family: 'Raleway', sans-serif; font-weight: bold;">
+      <b>36 Pieces</b> 
+      <ion-button expand="full" size="large" shape="round"color="success"><ion-icon name="add-circle-outline"></ion-icon></ion-button>
+  
+      </ion-card-content>
+    </ion-card>
+   </ion-col>
+<!-- vegetables 3-->
+   <ion-col style="width: 30%; height: 50%;">
+<ion-card>
+  <img src="assets/vegetables/carrots.png" style="width: 40%; height: auto; display: block; margin: auto;" class="lower-image"/>
+  <ion-card-header>
+    <ion-card-title style="align-items: center; font-size: 36px; font-family: 'Raleway', sans-serif;font-weight: bold;"><br>Carrots</ion-card-title>
+  </ion-card-header>
+
+  <ion-card-content style="display: flex; align-items: center; justify-content: space-between; align-items: center; font-size: 16px; font-family: 'Raleway', sans-serif; font-weight: bold;">
+    <b>79 Pieces</b> 
+    <ion-button expand="full" size="large" shape="round"color="success"><ion-icon name="add-circle-outline"></ion-icon></ion-button>
+
+    </ion-card-content>
 </ion-card>
+   </ion-col>
+  </ion-row>
+<!-- vegetables 4-->
+  <ion-row>
+    <ion-col  style="width: 30%; height: 50%;">
+    <ion-card>
+    <img src="assets/vegetables/bellpepper.png" style="width: 50%; height: auto; display: block; margin: 0 auto;" class="lower-image"/>
+    <ion-card-header>
+      <ion-card-title style="align-items: center; font-size: 36px; font-family: 'Raleway', sans-serif;font-weight: bold;"><br>Bell Pepper</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content style="display: flex; align-items: center; justify-content: space-between; align-items: center; font-size: 16px; font-family: 'Raleway', sans-serif; font-weight: bold;">
+      <b>69 Pieces</b> 
+      <ion-button expand="full" size="large" shape="round"color="success"><ion-icon name="add-circle-outline"></ion-icon></ion-button>
+      </ion-card-content>
+      </ion-card>
+    </ion-col>
+<!-- vegetables 5-->
+    <ion-col  style="width: 30%; height: 50%;">
+    <ion-card>
+    <img src="assets/vegetables/banana.png" style="width: 40%; height: auto; display: block; margin: 0 auto;" class="lower-image"/>
+    <ion-card-header>
+      <ion-card-title style="align-items: center; font-size: 36px; font-family: 'Raleway', sans-serif;font-weight: bold;"><br>Banana</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content style="display: flex; align-items: center; justify-content: space-between; align-items: center; font-size: 16px; font-family: 'Raleway', sans-serif; font-weight: bold;">
+      <b>10 Pieces</b> 
+      <ion-button expand="full" size="large" shape="round"color="success"><ion-icon name="add-circle-outline"></ion-icon></ion-button>
+      </ion-card-content>
+      </ion-card>
+    </ion-col>
+  <!-- vegetables 6-->
+    <ion-col  style="width: 30%; height: 50%;">
+      <ion-card >
+      <img src="assets/vegetables/orange.png" style="width: 40%; height: auto; display: block; margin: 0 auto;" class="lower-image"/>
+      <ion-card-header>
+        <ion-card-title style="align-items: center; font-size: 36px; font-family: 'Raleway', sans-serif;font-weight: bold;"><br>Orange</ion-card-title>
+      </ion-card-header>
+  
+      <ion-card-content style="display: flex; align-items: center; justify-content: space-between; align-items: center; font-size: 16px; font-family: 'Raleway', sans-serif; font-weight: bold;">
+        <b>17 Pieces</b> 
+        <ion-button expand="full" size="large" shape="round"color="success"><ion-icon name="add-circle-outline"></ion-icon></ion-button>
+        </ion-card-content>
+        </ion-card>
+      </ion-col>
+  </ion-row>
+  <!-- vegetables 7-->
+  <ion-row>
+  <ion-col>
+    <ion-card style="width: 31.5%; height: 100%;">
+    <img src="assets/vegetables/radish.png" style="width: 30%; height: auto; display: block; margin: 0 auto;" class="lower-image"/>
+    <ion-card-header>
+      <ion-card-title style="align-items: center; font-size: 36px; font-family: 'Raleway', sans-serif;font-weight: bold;"><br>Radish</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content style="display: flex; align-items: center; justify-content: space-between; align-items: center; font-size: 16px; font-family: 'Raleway', sans-serif; font-weight: bold;">
+      <b>5 Pieces</b> 
+      <ion-button expand="full" size="large" shape="round"color="success"><ion-icon name="add-circle-outline"></ion-icon></ion-button>
+      </ion-card-content>
+      </ion-card>
+    </ion-col>
+</ion-row>
+</ion-content>
