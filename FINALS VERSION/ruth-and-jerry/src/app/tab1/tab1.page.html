@@ -18,33 +18,32 @@
       <ion-title size="large">Home</ion-title>
     </ion-toolbar>
   </ion-header>
-
-  <img src="assets/icon/main_logoname.png" style="width: 30%; height: auto; display: block; margin-top: 70px; margin-left: 150px;"/>
-
-
+<ion-row>
+  <ion-col size="5.5">
+  <img src="assets/icon/main_logoname.png" style="width: 80%; height: auto; display: block; margin-top: 100px; margin-left: 70px;"/>
+  <ion-card style="width: 50%; height: 110px; margin-left: 150px;" >
     <ion-row>
-      <ion-col></ion-col>
-  <ion-col size="4" style="margin-right: 350px;">
-  <ion-card >
-
-  <div class="ion-text-center" style="margin-top: 12px;">
-    <ion-card-title style="font-size:26;">Good Day</ion-card-title>
-    <ion-card-title style="font: size 36px;; font-weight: bold;">Ruth Altea</ion-card-title>
-  </div>
-</ion-card>
+      <ion-col>
+        <img src="assets/icon/ruthaltea.jpg" style="width: 100px; height: auto; margin-left: 20px;"/>
+      </ion-col>
+      <ion-col>
+    <div class="ion-text-center" style="margin-top: 20px; margin-right: 20px;">
+        <ion-card-title style="font-size:22;  font-family: 'Raleway', sans-serif;">Good Day!</ion-card-title>
+      <ion-card-title style="font: size 36px;; font-weight: bold; font-family: 'Raleway', sans-serif; " color="success">Ruth Altea</ion-card-title>
+    </div>
+  </ion-col>
+</ion-row>
+  </ion-card>
 </ion-col>
-</ion-row>
 
-
- <!-- Four Buttons -->
- <ion-row class="ion-justify-content-center ion-margin-top lower-buttons">
+  <ion-col size="5.5" style="margin-left: 50px; margin-top: 100px;">
   <ion-button expand="full" size="large" shape="round" color="success"(click)="buttonClicked('Button 1')" href="/product-inventory"><ion-icon name="apps-sharp" slot="start"></ion-icon> Product Inventory</ion-button>
-  <ion-button expand="full" size="large" shape="round" color="success"(click)="buttonClicked('Button 2')" href="/customer-orders"><ion-icon name="newspaper-outline" slot="start"></ion-icon> Customer Orders</ion-button>
-</ion-row>
-<ion-row class="ion-justify-content-center ion-margin-top">
-  <ion-button expand="full" size="large" shape="round" color="success"(click)="buttonClicked('Button 3')" href="/sales-report"><ion-icon name="analytics-outline" slot="start"></ion-icon> Sales Report</ion-button>
-  <ion-button expand="full" size="large" shape="round" color="success"(click)="buttonClicked('Button 4')" href="/fresh-selections"><ion-icon name="book-outline" slot="start"></ion-icon>Fresh Selections</ion-button>
-</ion-row>
+  <ion-button style="margin-top: 25px;" expand="full" size="large" shape="round" color="success"(click)="buttonClicked('Button 2')" href="/customer-orders"><ion-icon name="newspaper-outline" slot="start"></ion-icon> Customer Orders</ion-button>
+  <ion-button style="margin-top: 25px;" expand="full" size="large" shape="round" color="success"(click)="buttonClicked('Button 3')" href="/sales-report"><ion-icon name="analytics-outline" slot="start"></ion-icon> Sales Report</ion-button>
+  <ion-button style="margin-top: 25px;" expand="full" size="large" shape="round" color="success"(click)="buttonClicked('Button 4')" href="/fresh-selections"><ion-icon name="book-outline" slot="start"></ion-icon>Fresh Selections</ion-button>
 
+
+  </ion-col>
+</ion-row>
   <app-explore-container name="">home page</app-explore-container>
 </ion-content>
