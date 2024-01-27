@@ -4,13 +4,13 @@ import { IonicModule } from '@ionic/angular';
 import { ExploreContainerComponent } from '../explore-container/explore-container.component';
 
 @Component({
-  selector: 'app-tab1',
-  templateUrl: 'tab1.page.html',
-  styleUrls: ['tab1.page.scss'],
+  selector: 'app-home',
+  templateUrl: 'home.page.html',
+  styleUrls: ['home.page.scss'],
   standalone: true,
   imports: [IonicModule,IonHeader, IonToolbar, IonTitle, IonContent, ExploreContainerComponent],
 })
-export class Tab1Page {buttonClicked(buttonLabel: string) {
+export class HomePage {buttonClicked(buttonLabel: string) {
   console.log(`Button clicked: ${buttonLabel}`);
   // You can add your logic here
 }

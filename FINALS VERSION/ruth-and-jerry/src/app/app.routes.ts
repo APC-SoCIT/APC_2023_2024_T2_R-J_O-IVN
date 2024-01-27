@@ -28,7 +28,8 @@ export const routes: Routes = [
   {
     path: 'fresh-selections',
     loadComponent: () => import('./fresh-selections/fresh-selections.page').then( m => m.FreshSelectionsPage)
-  },  {
+  },
+  {
     path: 'sales-report',
     loadComponent: () => import('./sales-report/sales-report.page').then( m => m.SalesReportPage)
   },
@@ -36,10 +37,18 @@ export const routes: Routes = [
     path: 'product-inventory',
     loadComponent: () => import('./product-inventory/product-inventory.page').then( m => m.ProductInventoryPage)
   },
+
   {
-    path: 'customer-orders',
-    loadComponent: () => import('./customer-orders/customer-orders.page').then( m => m.CustomerOrdersPage)
+    path: '',
+    redirectTo: '/main',
+    pathMatch: 'full',
   },
+  {
+    path: '',
+    redirectTo: '/main',
+    pathMatch: 'full',
+  },
+
 
 
   
