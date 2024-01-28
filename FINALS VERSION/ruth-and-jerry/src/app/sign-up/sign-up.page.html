@@ -41,12 +41,28 @@
         </ion-item>
       </ion-list>
           <ion-text color="success" class="ion-text-justify">
-            <h2>Terms of Condition</h2>
+            <h2>&nbsp;&nbsp;Terms of Condition</h2>
           </ion-text> 
           <ion-checkbox labelPlacement="end">I agree to the Terms of Condition</ion-checkbox>
-          <ion-checkbox labelPlacement="end">i Aagree on the Data Privacy Act</ion-checkbox>
+          <ion-checkbox labelPlacement="end" id="hover-trigger">I Aagree on the Data Privacy Notice</ion-checkbox>
+            <ion-popover trigger="hover-trigger" [keepContentsMounted]="true" triggerAction="hover">
+            <ng-template>
+            <ion-content class="ion-padding">
+              Please read this privacy notice (“Notice”) carefully to understand our policies and practices regarding your 
+              Personal Data and how we will treat it. This Notice applies to individuals who interact with R&J services 
+              as consumers (“you”). This Notice explains how your Personal Data are collected, used, and disclosed by OH, MY GULAY 
+              Philippines. (“R&J”, “We”, “Us”). It also tells you how you can access and update your Personal Data and 
+              make certain choices about how your Personal Data are used.
+              <br /><br />
+              This Notice covers both our online and offline data collection activities, including Personal Data that We collect 
+              through our various channels such as websites, apps, third party networks, Consumer Engagement Service, points of 
+              sale and events. Please note that We might aggregate personal data from different sources (e.g. websites, offline 
+              events).  Please see Section 9 for further information on how to object to this.
+            </ion-content>
+            </ng-template>
+            </ion-popover>
           <br />
-          <ion-button expand="full" shape="round" color="success">Create Account</ion-button>
+          <ion-button expand="full" shape="round" color="success" style="padding-left: 20px; padding-right: 20px;">Create Account</ion-button>
 
     </ion-card>
   </div>

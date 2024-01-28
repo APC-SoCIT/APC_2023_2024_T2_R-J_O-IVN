@@ -47,7 +47,11 @@ export const routes: Routes = [
     path: '',
     redirectTo: '/main',
     pathMatch: 'full',
+  },  {
+    path: 'forget-pass',
+    loadComponent: () => import('./forget-pass/forget-pass.page').then( m => m.ForgetPassPage)
   },
+
 
 
 
