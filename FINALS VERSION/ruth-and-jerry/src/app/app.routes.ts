@@ -42,6 +42,10 @@ export const routes: Routes = [
     path: 'forget-pass',
     loadComponent: () => import('./forget-pass/forget-pass.page').then( m => m.ForgetPassPage)
   },
+  {
+    path: 'profile',
+    loadComponent: () => import('./profile/profile.page').then( m => m.ProfilePage)
+  },
 
   {
     path: '',

@@ -1,11 +1,25 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-buttons slot="start">
-      <ion-back-button fill="outline"size="large" color="success" default-href="#">
-      </ion-back-button>
+      <ion-button fill="clear"size="large" color="success" href="/home">
+        <ion-icon name="caret-back-outline"></ion-icon>
+            </ion-button>
+    </ion-buttons>
+
+    <ion-buttons slot="secondary">
+      <ion-button color="success" href="/home" >Home</ion-button>
+    </ion-buttons>
+    <ion-buttons slot="primary">
+      <ion-button color="success" href="/profile">Profile </ion-button>
+    </ion-buttons>
+
+    <ion-buttons slot="end">
+      <ion-button  size="large" color="success" href="/settings">
+        <ion-icon name="settings-sharp"></ion-icon>
+      </ion-button>
     </ion-buttons>
     
-    <ion-title>Settings</ion-title>
+    <ion-title color="success" style="font-weight: bold;   font-family: 'Raleway', sans-serif;">Settings</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -16,7 +30,11 @@
     </ion-toolbar>
   </ion-header>
 
-  <ion-card-content color="light">
+  <ion-row>
+    <ion-col></ion-col>
+    <ion-col size="5" style="margin-top: 7%;">
+
+  <ion-card color="light">
     <ion-list>
       <ion-item>
         <ion-thumbnail slot="start">
@@ -28,11 +46,7 @@
       
       </ion-card-header>
       </ion-item>
-    </ion-list>
- </ion-card-content>
-    
-  <ion-content color="light">
-    <ion-list [inset]="true">
+   
       <ion-item>
       <ion-select label="Language" interface="popover" color="success" placeholder="English">
         <ion-select-option value="english" color="success">English</ion-select-option>
@@ -52,9 +66,12 @@
       <ion-item>
         <ion-label>Help<ion-button color="success" fill="clear"><ion-icon name="caret-forward-outline"></ion-icon></ion-button></ion-label>
       </ion-item>
-      <ion-item>
+      <ion-item style="margin-bottom: 20px;">
         <ion-label>Feedback<ion-button color="success" fill="clear"><ion-icon name="caret-forward-outline"></ion-icon></ion-button></ion-label>
       </ion-item>
     </ion-list>
-  </ion-content>
+  </ion-card>
+</ion-col>
+<ion-col></ion-col>
+</ion-row>
 </ion-content>
