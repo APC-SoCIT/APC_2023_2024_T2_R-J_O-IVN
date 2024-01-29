@@ -1,3 +1,4 @@
+
 import { Routes } from '@angular/router';
 
 export const routes: Routes = [
@@ -18,8 +19,8 @@ export const routes: Routes = [
     loadComponent: () => import('./main/main.page').then( m => m.MainPage)
   },
   {
-    path: 'profile',
-    loadComponent: () => import('./profile/profile.page').then( m => m.ProfilePage)
+    path: 'home',
+    loadComponent: () => import('./home/home.page').then( m => m.HomePage)
   },
   {
     path: 'settings',
@@ -38,8 +39,8 @@ export const routes: Routes = [
     loadComponent: () => import('./product-inventory/product-inventory.page').then( m => m.ProductInventoryPage)
   },
   {
-    path: 'home',
-    loadComponent: () => import('./home/home.page').then( m => m.HomePage)
+    path: 'forget-pass',
+    loadComponent: () => import('./forget-pass/forget-pass.page').then( m => m.ForgetPassPage)
   },
 
   {
@@ -52,6 +53,11 @@ export const routes: Routes = [
     redirectTo: '/main',
     pathMatch: 'full',
   },
+  {
+    path: 'home',
+    loadComponent: () => import('./home/home.page').then( m => m.HomePage)
+  },
+
 
 
 
