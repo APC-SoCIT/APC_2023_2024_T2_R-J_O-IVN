@@ -18,8 +18,8 @@ export const routes: Routes = [
     loadComponent: () => import('./main/main.page').then( m => m.MainPage)
   },
   {
-    path: 'tab4',
-    loadComponent: () => import('./tab4/tab4.page').then( m => m.Tab4Page)
+    path: 'profile',
+    loadComponent: () => import('./profile/profile.page').then( m => m.ProfilePage)
   },
   {
     path: 'settings',
@@ -36,6 +36,10 @@ export const routes: Routes = [
   {
     path: 'product-inventory',
     loadComponent: () => import('./product-inventory/product-inventory.page').then( m => m.ProductInventoryPage)
+  },
+  {
+    path: 'home',
+    loadComponent: () => import('./home/home.page').then( m => m.HomePage)
   },
 
   {
