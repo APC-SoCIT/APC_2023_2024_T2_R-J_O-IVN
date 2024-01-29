@@ -21,9 +21,11 @@
       <ion-title size="large">tab4</ion-title>
     </ion-toolbar>
   </ion-header>
-</ion-content>
 
-<ion-card-content color="light">
+<ion-row>
+  <ion-col></ion-col>
+  <ion-col size="6">
+<ion-card color="light">
   <ion-list>
     <ion-item>
       <ion-thumbnail slot="start">
@@ -47,11 +49,10 @@
     </ion-item>
 
   </ion-list>
-</ion-card-content>
+  <ion-button  fill="outline" size="Large"color="success"style="font-weight: bold;justify-content: center; margin-top: 30px;"href="/main" >Sign out <ion-icon name="log-out-outline" slot="end"></ion-icon></ion-button>
 
-<ion-button  fill="outline" size="Large"color="success"style="font-weight: bold;justify-content: center; margin-top: 30px;"href="/main" >Sign out <ion-icon name="log-out-outline" slot="end"></ion-icon></ion-button>
-
-<div class="ion-activatable ripple-parent rounded-rectangle">
-  Bounded
-  <ion-ripple-effect></ion-ripple-effect>
-</div>
+</ion-card>
+</ion-col>
+<ion-col></ion-col>
+</ion-row>
+</ion-content>

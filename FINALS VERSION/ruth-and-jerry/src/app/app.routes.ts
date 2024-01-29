@@ -1,3 +1,4 @@
+
 import { Routes } from '@angular/router';
 
 export const routes: Routes = [
@@ -18,8 +19,8 @@ export const routes: Routes = [
     loadComponent: () => import('./main/main.page').then( m => m.MainPage)
   },
   {
-    path: 'tab4',
-    loadComponent: () => import('./tab4/tab4.page').then( m => m.Tab4Page)
+    path: 'home',
+    loadComponent: () => import('./home/home.page').then( m => m.HomePage)
   },
   {
     path: 'settings',
@@ -37,6 +38,10 @@ export const routes: Routes = [
     path: 'product-inventory',
     loadComponent: () => import('./product-inventory/product-inventory.page').then( m => m.ProductInventoryPage)
   },
+  {
+    path: 'forget-pass',
+    loadComponent: () => import('./forget-pass/forget-pass.page').then( m => m.ForgetPassPage)
+  },
 
   {
     path: '',
@@ -47,9 +52,10 @@ export const routes: Routes = [
     path: '',
     redirectTo: '/main',
     pathMatch: 'full',
-  },  {
-    path: 'forget-pass',
-    loadComponent: () => import('./forget-pass/forget-pass.page').then( m => m.ForgetPassPage)
+  },
+  {
+    path: 'home',
+    loadComponent: () => import('./home/home.page').then( m => m.HomePage)
   },
 
 
