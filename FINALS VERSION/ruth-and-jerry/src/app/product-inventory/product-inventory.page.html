@@ -1,8 +1,16 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-buttons slot="start">
-      <ion-back-button fill="outline"size="large" color="success" default-href="#">
-      </ion-back-button>
+      <ion-button fill="clear"size="large" color="success" href="/home">
+        <ion-icon name="caret-back-outline"></ion-icon>
+            </ion-button>
+    </ion-buttons>
+
+    <ion-buttons slot="secondary">
+      <ion-button color="success" href="/home">Home</ion-button>
+    </ion-buttons>
+    <ion-buttons slot="primary">
+      <ion-button color="success" href="/profile"><ion-icon name="person-circle-outline" color="success" slot="start"></ion-icon> Profile </ion-button>
     </ion-buttons>
 
     <ion-buttons slot="end">
@@ -11,7 +19,7 @@
       </ion-button>
     </ion-buttons>
 
-    <ion-title>Product </ion-title>
+    <ion-title color="success" style="font-weight: bold;   font-family: 'Raleway', sans-serif;">Product Inventory</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -32,7 +40,14 @@
 
   <ion-card-content style="display: flex; align-items: center; justify-content: space-between; align-items: center; font-size: 16px; font-family: 'Raleway', sans-serif; font-weight: bold;">
     <b>20 Pieces</b> 
-    <ion-button slot="end" size="large" shape="round"color="success"><ion-icon name="add-circle-outline"></ion-icon></ion-button>
+
+    <ion-buttons slot="end" style="margin-left: 55%;">
+      <ion-button color="success" size="large"fill="clear" color="success" ><ion-icon name="add-circle-outline"></ion-icon></ion-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button color="danger" size="large"fill="clear"><ion-icon name="remove-circle-outline"></ion-icon></ion-button>
+    </ion-buttons>
+
     </ion-card-content>
   </ion-card>
    </ion-col>
@@ -46,8 +61,14 @@
   
     <ion-card-content style="display: flex; align-items: center; justify-content: space-between; align-items: center; font-size: 16px; font-family: 'Raleway', sans-serif; font-weight: bold;">
       <b>36 Pieces</b> 
-      <ion-button expand="full" size="large" shape="round"color="success"><ion-icon name="add-circle-outline"></ion-icon></ion-button>
-  
+
+      <ion-buttons slot="end" style="margin-left: 55%;">
+        <ion-button color="success" size="large"fill="clear" color="success" ><ion-icon name="add-circle-outline"></ion-icon></ion-button>
+      </ion-buttons>
+      <ion-buttons slot="end">
+        <ion-button color="danger" size="large"fill="clear"><ion-icon name="remove-circle-outline"></ion-icon></ion-button>
+      </ion-buttons>
+
       </ion-card-content>
     </ion-card>
    </ion-col>
@@ -61,7 +82,13 @@
 
   <ion-card-content style="display: flex; align-items: center; justify-content: space-between; align-items: center; font-size: 16px; font-family: 'Raleway', sans-serif; font-weight: bold;">
     <b>79 Pieces</b> 
-    <ion-button expand="full" size="large" shape="round"color="success"><ion-icon name="add-circle-outline"></ion-icon></ion-button>
+
+    <ion-buttons slot="end" style="margin-left: 55%;">
+      <ion-button color="success" size="large"fill="clear" color="success" ><ion-icon name="add-circle-outline"></ion-icon></ion-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button color="danger" size="large"fill="clear"><ion-icon name="remove-circle-outline"></ion-icon></ion-button>
+    </ion-buttons>
 
     </ion-card-content>
 </ion-card>
@@ -78,8 +105,15 @@
 
     <ion-card-content style="display: flex; align-items: center; justify-content: space-between; align-items: center; font-size: 16px; font-family: 'Raleway', sans-serif; font-weight: bold;">
       <b>69 Pieces</b> 
-      <ion-button expand="full" size="large" shape="round"color="success"><ion-icon name="add-circle-outline"></ion-icon></ion-button>
-      </ion-card-content>
+
+      <ion-buttons slot="end" style="margin-left: 55%;">
+        <ion-button color="success" size="large"fill="clear" color="success" ><ion-icon name="add-circle-outline"></ion-icon></ion-button>
+      </ion-buttons>
+      <ion-buttons slot="end">
+        <ion-button color="danger" size="large"fill="clear"><ion-icon name="remove-circle-outline"></ion-icon></ion-button>
+      </ion-buttons>
+
+    </ion-card-content>
       </ion-card>
     </ion-col>
 <!-- vegetables 5-->
@@ -92,8 +126,15 @@
 
     <ion-card-content style="display: flex; align-items: center; justify-content: space-between; align-items: center; font-size: 16px; font-family: 'Raleway', sans-serif; font-weight: bold;">
       <b>10 Pieces</b> 
-      <ion-button expand="full" size="large" shape="round"color="success"><ion-icon name="add-circle-outline"></ion-icon></ion-button>
-      </ion-card-content>
+
+      <ion-buttons slot="end" style="margin-left: 55%;">
+        <ion-button color="success" size="large"fill="clear" color="success" ><ion-icon name="add-circle-outline"></ion-icon></ion-button>
+      </ion-buttons>
+      <ion-buttons slot="end">
+        <ion-button color="danger" size="large"fill="clear"><ion-icon name="remove-circle-outline"></ion-icon></ion-button>
+      </ion-buttons>
+
+    </ion-card-content>
       </ion-card>
     </ion-col>
   <!-- vegetables 6-->
@@ -106,8 +147,15 @@
   
       <ion-card-content style="display: flex; align-items: center; justify-content: space-between; align-items: center; font-size: 16px; font-family: 'Raleway', sans-serif; font-weight: bold;">
         <b>17 Pieces</b> 
-        <ion-button expand="full" size="large" shape="round"color="success"><ion-icon name="add-circle-outline"></ion-icon></ion-button>
-        </ion-card-content>
+
+        <ion-buttons slot="end" style="margin-left: 55%;">
+          <ion-button color="success" size="large"fill="clear" color="success" ><ion-icon name="add-circle-outline"></ion-icon></ion-button>
+        </ion-buttons>
+        <ion-buttons slot="end">
+          <ion-button color="danger" size="large"fill="clear"><ion-icon name="remove-circle-outline"></ion-icon></ion-button>
+        </ion-buttons>
+
+      </ion-card-content>
         </ion-card>
       </ion-col>
   </ion-row>
@@ -122,8 +170,15 @@
 
     <ion-card-content style="display: flex; align-items: center; justify-content: space-between; align-items: center; font-size: 16px; font-family: 'Raleway', sans-serif; font-weight: bold;">
       <b>5 Pieces</b> 
-      <ion-button expand="full" size="large" shape="round"color="success"><ion-icon name="add-circle-outline"></ion-icon></ion-button>
-      </ion-card-content>
+
+      <ion-buttons slot="end" style="margin-left: 55%;">
+        <ion-button color="success" size="large"fill="clear" color="success" ><ion-icon name="add-circle-outline"></ion-icon></ion-button>
+      </ion-buttons>
+      <ion-buttons slot="end">
+        <ion-button color="danger" size="large"fill="clear"><ion-icon name="remove-circle-outline"></ion-icon></ion-button>
+      </ion-buttons>
+
+    </ion-card-content>
       </ion-card>
     </ion-col>
 </ion-row>
