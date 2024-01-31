@@ -19,4 +19,11 @@
   .lower-buttons {
     margin-top: 100px; /* Adjust the margin-top value as needed */
   }
+  .background-image {
+    background-image: url('../../assets/icon/homebg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh; /* Adjust the height based on your design */
+  }
   

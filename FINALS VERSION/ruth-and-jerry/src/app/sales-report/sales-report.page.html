@@ -1,8 +1,16 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-buttons slot="start">
-      <ion-back-button fill="outline"size="large" color="success" default-href="#">
-      </ion-back-button>
+      <ion-button fill="clear"size="large" color="success" href="/home">
+        <ion-icon name="caret-back-outline"></ion-icon>
+            </ion-button>
+    </ion-buttons>
+
+    <ion-buttons slot="secondary">
+      <ion-button color="success" href="/home" >Home</ion-button>
+    </ion-buttons>
+    <ion-buttons slot="primary">
+      <ion-button color="success" href="/profile">Profile </ion-button>
     </ion-buttons>
     
     <ion-buttons slot="end">
@@ -11,7 +19,7 @@
       </ion-button>
     </ion-buttons>
     
-    <ion-title>Sales Report</ion-title>
+    <ion-title color="success" style="font-family: 'Raleway',sans-serif; font-weight: bold;">Sales Report</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -22,14 +30,48 @@
     </ion-toolbar>
   </ion-header>
 
-  <ion-card>
+<ion-row><ion-col></ion-col>
+<ion-col size="6.5">
+<ion-card style="margin-top: 13%;background-image: url(assets/vegetables/background.jpg);">
+<ion-row><ion-col></ion-col>
+<ion-col size="6">
+  <ion-card style="margin-top: 10%;margin-bottom: 10%;">
     <ion-card-header>
-      <ion-card-title class="ion-text-center" style="font-size: 26px; font-family: 'Roboto', sans-serif;font-weight:lighter;">Welcome to your dashboard!</ion-card-title>
-      <ion-card-subtitle class="ion-text-center" style="font-size: 26px; font-family: 'Roboto', sans-serif;font-weight:lighter;">Card Subtitle</ion-card-subtitle>
+      <ion-card-title class="ion-text-center" style="font-size: 20px; font-family: 'Roboto', sans-serif;font-weight:lighter;margin-bottom: 5%;">Welcome to your dashboard!</ion-card-title>
+      <ion-card-subtitle class="ion-text-center"  color="success" style="font-size: 26px; font-family: 'Roboto', sans-serif;font-weight: bold;">R&J Store</ion-card-subtitle>
+      <ion-card-subtitle class="ion-text-center" style="font-size: 16px; font-family: 'Raleway',sans-serif;font-weight: bold;">Store Name</ion-card-subtitle>
     </ion-card-header>
-  
-    <ion-card-content>
-      Here's a small text description for the card content. Nothing more, nothing less.
-    </ion-card-content>
+
+    <ion-row><ion-col></ion-col>
+    <ion-col size="9"><ion-card>
+      <ion-row><ion-col size="8">
+      <ion-card-title style="font-size: 14px; font-family: 'Roboto', sans-serif;font-weight: bold;">Altea, Ruth</ion-card-title>
+      <ion-card-subtitle style="font-size: 12px; font-family: 'Raleway',sans-serif;font-weight: bold;"><i>Member since 1/31/2024</i></ion-card-subtitle>
+    </ion-col>
+  <ion-col size="2">
+    <ion-button fill="clear" color="success" size="small" style="margin-left: 10px;" href="/profile"><ion-icon name="person-circle-outline"></ion-icon></ion-button>
+  </ion-col></ion-row>
+    </ion-card></ion-col>
+  <ion-col></ion-col></ion-row>
   </ion-card>
+</ion-col>
+<ion-col></ion-col></ion-row>
+
+<ion-row>
+  <ion-col></ion-col>
+  <ion-col size="4.5">
+    
+    <ion-button href="/store-overview" size="large" shape="round" color="success" expand="full" style="font-weight: bold;font-family: 'Raleway',sans-serif;margin-bottom: 10%;">Store Overview</ion-button>
+
+
+  </ion-col>
+
+  <ion-col size="4.5">
+    <ion-button href="/product-overview" size="large" shape="round" color="success" expand="full" style="font-weight: bold;font-family: 'Raleway',sans-serif;margin-bottom: 10%;">Product Overview</ion-button>
+
+</ion-col>
+<ion-col></ion-col>
+</ion-row>
+</ion-card>
+</ion-col><ion-col></ion-col></ion-row>
 </ion-content>
