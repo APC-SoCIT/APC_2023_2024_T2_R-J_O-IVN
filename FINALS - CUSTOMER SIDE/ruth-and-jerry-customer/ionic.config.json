@@ -1,0 +1,7 @@
+{
+  "name": "ruth-and-jerry-customer",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
