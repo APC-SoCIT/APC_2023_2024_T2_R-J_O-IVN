@@ -1,0 +1,75 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button fill="clear"size="large" color="success" href="/home">
+        <ion-icon name="caret-back-outline"></ion-icon>
+            </ion-button>
+    </ion-buttons>
+
+    <ion-buttons slot="secondary">
+      <ion-button color="success" href="/home" >Home</ion-button>
+    </ion-buttons>
+
+    <ion-buttons slot="end">
+      <ion-button  size="large" color="success" href="/settings">
+        <ion-icon name="settings-sharp"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    
+    <ion-title color="success" style="font-weight: bold;   font-family: 'Raleway', sans-serif;">Profile</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">profile</ion-title>
+    </ion-toolbar>
+  </ion-header>
+<ion-row>
+  <ion-col style="margin-top: 5%;">
+<ion-card color="light">
+  <ion-list>
+    <ion-item>
+      <ion-thumbnail slot="start">
+        <img src="assets/icon/ruthaltea.jpg" />
+      </ion-thumbnail>
+      <ion-card-header>
+      <ion-label><ion-card-title>Ruth Altea</ion-card-title></ion-label>
+      <ion-label><ion-card-subtitle>Customer</ion-card-subtitle></ion-label>
+    </ion-card-header>
+    </ion-item>
+    <ion-item>
+      <ion-input size="large" color="success"label="Email input" labelPlacement="stacked" type="email" placeholder="Enter your email"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input label="First Name" color="success"labelPlacement="stacked" placeholder="Enter your first name"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input label="Last Name" color="success" labelPlacement="stacked" placeholder="Enter your last name"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input label="Phone Number" color="success" labelPlacement="stacked" placeholder="Enter your phone number"></ion-input>
+    </ion-item>
+
+    <ion-item  style="margin-bottom: 20px;">
+      <ion-input label="Address" color="success" labelPlacement="stacked" placeholder="Enter your Address"></ion-input>
+    </ion-item>
+
+  </ion-list>
+</ion-card>
+
+<ion-row>
+  <ion-col></ion-col>
+  <ion-col>
+    <ion-button expand="full" fill="outline" shape="round" color="success" style="padding-left: 20px; padding-right: 20px; margin-bottom: 10px;" href="/main">Sign out <ion-icon name="log-out-outline" slot="end"></ion-icon></ion-button>
+  </ion-col>
+  <ion-col></ion-col>
+</ion-row>
+
+</ion-col>
+</ion-row>
+</ion-content>
