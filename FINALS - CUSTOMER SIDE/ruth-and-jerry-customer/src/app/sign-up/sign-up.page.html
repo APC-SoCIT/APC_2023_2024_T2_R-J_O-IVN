@@ -1,0 +1,76 @@
+
+<ion-content>
+  <ion-card style="background-image: url(assets/vegetables/background.jpg);width: 100%;height: 125%;">
+  <ion-row >
+    <ion-col ></ion-col>
+    <ion-col size="3.8" class="ion-text-center" style="margin-top: 40px;">
+      <ion-card color="success">
+      <img src="assets/icon/main_logoW.png" style="width: 130px; height: auto; margin-top: 20px;"/>
+      <ion-title style="font-size:26px;  font-family: 'Raleway', sans-serif;font-weight: bold; margin-bottom: 20px; margin-top: 10px;">
+        Sign Up
+      </ion-title>
+      </ion-card>
+      <div class="ion-center">
+    <ion-card >
+      <ion-list>
+        <ion-item>
+          <ion-input type="Name" placeholder="First Name"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-input type="Name" placeholder="Last Name"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-input type="tel" placeholder="Phone Number"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-input type="address" placeholder="Address"></ion-input>
+        </ion-item>
+        <ion-item>
+        <ion-input type="email" placeholder="Email"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-input label="Enter Password" type="password" value="Password"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-input label="Confirm Password" type="password" value="Password"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-select label="User" interface="popover" color="success" placeholder="Admin">
+            <ion-select-option value="admin" color="success">Admin</ion-select-option>
+            <ion-select-option value="customer" color="success">Customer</ion-select-option>
+          </ion-select>
+        </ion-item>
+        <ion-item>
+          <ion-input type="Name" placeholder="Store Name"></ion-input>
+        </ion-item>
+      </ion-list>
+          <ion-title color="success" style="font-size: 16px;margin-right: 55%; margin-bottom: 5px;" id="hover-trigger">Terms of Condition</ion-title>
+          <ion-popover trigger="hover-trigger" [keepContentsMounted]="true" triggerAction="hover">
+            <ng-template>
+            <ion-content class="ion-padding">
+              Please read this privacy notice (“Notice”) carefully to understand our policies and practices regarding your 
+              Personal Data and how we will treat it. This Notice applies to individuals who interact with R&J services 
+              as consumers (“you”). This Notice explains how your Personal Data are collected, used, and disclosed by OH, MY GULAY 
+              Philippines. (“R&J”, “We”, “Us”). It also tells you how you can access and update your Personal Data and 
+              make certain choices about how your Personal Data are used.
+              <br /><br />
+              This Notice covers both our online and offline data collection activities, including Personal Data that We collect 
+              through our various channels such as websites, apps, third party networks, Consumer Engagement Service, points of 
+              sale and events. Please note that We might aggregate personal data from different sources (e.g. websites, offline 
+              events).  Please see Section 9 for further information on how to object to this.
+            </ion-content>
+            </ng-template>
+            </ion-popover>
+          <ion-checkbox labelPlacement="end" style="margin-right: 10px;">I agree to the Terms of Condition</ion-checkbox>
+          <ion-checkbox labelPlacement="end" >I Agree on the Data Privacy Notice</ion-checkbox>
+          <br />
+          <ion-button expand="full" shape="round" color="success" style="padding-left: 20px; padding-right: 20px; margin-bottom: 10px;" href="/login">Create Account</ion-button>
+
+    </ion-card>
+  </div>
+  </ion-col>
+  <ion-col></ion-col>
+  </ion-row>
+  </ion-card>
+</ion-content>
+  
