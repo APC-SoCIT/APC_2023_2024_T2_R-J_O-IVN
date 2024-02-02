@@ -1,0 +1,96 @@
+<ion-header [translucent]="true" >
+  <ion-toolbar>
+    <ion-buttons slot="secondary">
+      <ion-button color="success" href="/home" >Home</ion-button>
+    </ion-buttons>
+    <ion-buttons slot="primary">
+      <ion-button color="success" href="/profile">Profile </ion-button>
+    </ion-buttons>
+
+    <ion-buttons slot="end">
+      <ion-button  size="large" color="success" href="/settings">
+        <ion-icon name="settings-sharp"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+    <ion-title color="success" style="font-weight: bold;font-family: 'Raleway',sans-serif;" >Home</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="background-image">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large" color="success"style="font-family: 'Raleway',sans-serif;font-weight: bold;">Home</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+<ion-row>
+<ion-col>
+  <img src="assets/icon/main_logoname.png" style="width: 80%; height: auto; display: block; margin-top: 50px; margin-left:auto; margin-right: auto;"/>
+</ion-col>
+</ion-row>
+
+<ion-row>
+  <ion-col>
+    <ion-card >
+      <div class="ion-text-center" style="margin-top: 20px;margin-bottom: 20px;">
+          <ion-card-title style="font-size:35px;  font-family: 'Raleway', sans-serif;">Good Day!</ion-card-title>
+        <ion-card-title style="font-size: 40px;; font-weight: bold; font-family: 'Raleway', sans-serif; " color="success">Ruth Altea</ion-card-title>
+      </div>
+    </ion-card>
+  </ion-col>
+  </ion-row>
+
+<ion-col style="margin-left: auto; margin-right: auto; margin-top: 20px;">
+<ion-row>
+<ion-col>
+<ion-card color="success">
+  <img src="assets/logos/productinventory.png" style="width: 50%; height: auto; display: block; margin: 0 auto;margin-top: 15px;" class="lower-image"/>
+  <ion-row>
+  <ion-col>  
+  <ion-buttons fill="clear" size="large" shape="round" color="success" class="ion-text-center"> <ion-button href="/product-inventory"  
+    style="color: #ffffff;font-weight: bold;   font-family: 'Raleway', sans-serif; margin-left: auto; margin-right: auto;">Product Inventory</ion-button></ion-buttons>
+  </ion-col>
+</ion-row>
+</ion-card>
+</ion-col>
+
+<ion-col>
+<ion-card color="success">
+  <img src="assets/logos/customerorder.png" style="width: 50%; height: auto; display: block; margin: 0 auto;margin-top: 15px;" class="lower-image"/>
+  <ion-row>
+  <ion-col>
+  <ion-buttons fill="clear" size="large" shape="round" color="success"><ion-button href="/customer-orders" 
+    style="color:#ffffff;font-weight: bold;font-family: 'Raleway',sans-serif; margin-left: auto; margin-right: auto;">Customer Orders</ion-button></ion-buttons>
+</ion-col>
+</ion-row>
+</ion-card>
+</ion-col>
+</ion-row>
+
+<ion-row>    
+    <ion-col>
+      <ion-card color="success">
+        <img src="assets/logos/sales.png" style="width: 42.5%; height: auto; display: block; margin: 0 auto;margin-top: 15px;" class="lower-image"/>
+        <ion-row>
+        <ion-col>
+        <ion-buttons fill="clear"size="large" shape="round" color="success"><ion-button href="/sales-report" 
+          style="color: #ffffff;font-family: 'Raleway',sans-serif;font-weight: bold; margin-left: auto; margin-right: auto;">Sales Report</ion-button></ion-buttons>
+      </ion-col>
+      </ion-row>
+      </ion-card>
+      </ion-col>
+    <ion-col>
+    <ion-card color="success">
+      <img src="assets/logos/freshselection.png" style="width: 50%; height: auto; display: block; margin: 0 auto;margin-top: 15px;" class="lower-image"/>
+      <ion-row>
+      <ion-col>
+      <ion-buttons fill="clear"size="large" shape="round" color="success"><ion-button href="/fresh-selections" 
+        style="color: #ffffff;font-family: 'Raleway',sans-serif;font-weight: bold; margin-left: auto; margin-right: auto;">Fresh Selections</ion-button></ion-buttons>
+    </ion-col>
+    </ion-row>
+    </ion-card>
+    </ion-col>
+</ion-row>
+</ion-col>
+</ion-content>

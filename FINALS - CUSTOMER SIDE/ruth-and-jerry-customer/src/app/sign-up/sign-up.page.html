@@ -2,8 +2,7 @@
 <ion-content>
   <ion-card style="background-image: url(assets/vegetables/background.jpg);width: 100%;height: 125%;">
   <ion-row >
-    <ion-col ></ion-col>
-    <ion-col size="3.8" class="ion-text-center" style="margin-top: 40px;">
+    <ion-col class="ion-text-center" style="margin-top: 40px;">
       <ion-card color="success">
       <img src="assets/icon/main_logoW.png" style="width: 130px; height: auto; margin-top: 20px;"/>
       <ion-title style="font-size:26px;  font-family: 'Raleway', sans-serif;font-weight: bold; margin-bottom: 20px; margin-top: 10px;">
@@ -35,9 +34,9 @@
           <ion-input label="Confirm Password" type="password" value="Password"></ion-input>
         </ion-item>
         <ion-item>
-          <ion-select label="User" interface="popover" color="success" placeholder="Admin">
-            <ion-select-option value="admin" color="success">Admin</ion-select-option>
+          <ion-select label="User" interface="popover" color="success" placeholder="Customer">
             <ion-select-option value="customer" color="success">Customer</ion-select-option>
+            <ion-select-option value="admin" color="success">Admin</ion-select-option>
           </ion-select>
         </ion-item>
         <ion-item>
@@ -69,7 +68,6 @@
     </ion-card>
   </div>
   </ion-col>
-  <ion-col></ion-col>
   </ion-row>
   </ion-card>
 </ion-content>
