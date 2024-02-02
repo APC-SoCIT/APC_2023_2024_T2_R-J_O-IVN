@@ -33,4 +33,24 @@ export const routes: Routes = [
     path: 'settings',
     loadComponent: () => import('./settings/settings.page').then( m => m.SettingsPage)
   },
+  {
+    path: 'cart',
+    loadComponent: () => import('./cart/cart.page').then( m => m.CartPage)
+  },
+  {
+    path: 'inventory',
+    loadComponent: () => import('./inventory/inventory.page').then( m => m.InventoryPage)
+  },
+  {
+    path: 'myreceipts',
+    loadComponent: () => import('./myreceipts/myreceipts.page').then( m => m.MyreceiptsPage)
+  },
+  {
+    path: 'search',
+    loadComponent: () => import('./search/search.page').then( m => m.SearchPage)
+  },
+  {
+    path: 'orderhistory',
+    loadComponent: () => import('./orderhistory/orderhistory.page').then( m => m.OrderhistoryPage)
+  },
 ];
