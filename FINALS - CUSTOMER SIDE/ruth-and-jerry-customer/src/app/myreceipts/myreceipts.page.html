@@ -1,13 +1,100 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>myreceipts</ion-title>
+    <ion-buttons slot="start">
+      <ion-button fill="clear"size="large" color="success" href="/home">
+        <ion-icon name="caret-back-outline"></ion-icon>
+            </ion-button>
+    </ion-buttons>
+
+    <ion-buttons slot="secondary">
+      <ion-button color="success" href="/home" >Home</ion-button>
+    </ion-buttons>
+    <ion-buttons slot="primary">
+      <ion-button color="success" href="/profile">Profile </ion-button>
+    </ion-buttons>
+    
+    <ion-title color="success" style="font-weight: bold;   font-family: 'Raleway', sans-serif;"></ion-title>
+
+    <ion-buttons slot="end">
+      <ion-button  size="large" color="success" href="/settings">
+        <ion-icon name="settings-sharp">My Receipts</ion-icon>
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">myreceipts</ion-title>
+      <ion-title size="large">My Receipts</ion-title>
     </ion-toolbar>
   </ion-header>
+
+  <ion-row>
+    <ion-col style="margin-top: 7%;">
+
+<ion-accordion-group>
+        <ion-accordion value="first">
+          <ion-item slot="header" color="light">
+            <ion-label>Order #AA-2024</ion-label>
+          </ion-item>
+          <div class="ion-padding" slot="content">
+
+  <ion-card color="light">
+    <ion-card-header>
+      <ion-card-title> <h1 style="font-size: 30px;"><b>&nbsp;Receipts</b></h1></ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list>
+        <ion-item>
+          <ion-thumbnail slot="start">
+            <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/thumbnail.svg" />
+          </ion-thumbnail>
+          <ion-label>Carrot</ion-label>
+          <ion-text size="large"><b>₱ 75 &nbsp;</b></ion-text>
+        </ion-item>
+  
+        <ion-item>
+          <ion-thumbnail slot="start">
+            <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/thumbnail.svg" />
+          </ion-thumbnail>
+          <ion-label>Tomato</ion-label>
+          <ion-text size="large"><b>₱ 85 &nbsp;</b></ion-text>
+        </ion-item>
+  
+        <ion-item>
+          <ion-thumbnail slot="start">
+            <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/thumbnail.svg" />
+          </ion-thumbnail>
+          <ion-label>Lettuce</ion-label>
+          <ion-text size="large"><b>₱ 90 &nbsp;</b></ion-text>
+        </ion-item>
+  
+        <ion-item lines="none">
+          <ion-thumbnail slot="start">
+            <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/thumbnail.svg" />
+          </ion-thumbnail>
+          <ion-label>Banana</ion-label>
+          <ion-text size="large"><b>₱ 100 &nbsp;</b></ion-text>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+  <ion-card>
+    <ion-card-content>
+      <ion-item>
+        <ion-text>Shipping to: </ion-text>
+        
+      <ion-text size="large" slot="end">
+        <b>525 6-9Th Street, Villamor Air Base, Pasay City &nbsp;</b>
+      </ion-text>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+        </div>
+        </ion-accordion>
+      </ion-accordion-group>
+</ion-col>
+</ion-row>
 </ion-content>
+

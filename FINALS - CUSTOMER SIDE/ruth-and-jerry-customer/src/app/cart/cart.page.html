@@ -13,7 +13,13 @@
       <ion-button color="success" href="/profile">Profile </ion-button>
     </ion-buttons>
     
-    <ion-title color="success" style="font-weight: bold;   font-family: 'Raleway', sans-serif;">Settings</ion-title>
+    <ion-title color="success" style="font-weight: bold;   font-family: 'Raleway', sans-serif;"></ion-title>
+
+    <ion-buttons slot="end">
+      <ion-button  size="large" color="success" href="/settings">
+        <ion-icon name="settings-sharp"></ion-icon>
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
@@ -28,11 +34,71 @@
     <ion-col style="margin-top: 7%;">
 
   <ion-card color="light">
-    <ion-list>
-      <ion-item>
-      </ion-item>
-    </ion-list>
+    <ion-card-header>
+      <ion-card-title> <h1 style="font-size: 30px;"><b>&nbsp;Cart</b></h1></ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list>
+        <ion-item>
+          <ion-thumbnail slot="start">
+            <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/thumbnail.svg" />
+          </ion-thumbnail>
+          <ion-label>Carrot</ion-label>
+          <ion-text size="large"><b>₱ 75 &nbsp;</b></ion-text>
+          <ion-button>
+            <b>Quantity: 02</b>
+          </ion-button>
+        </ion-item>
+  
+        <ion-item>
+          <ion-thumbnail slot="start">
+            <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/thumbnail.svg" />
+          </ion-thumbnail>
+          <ion-label>Tomato</ion-label>
+          <ion-text size="large"><b>₱ 85 &nbsp;</b></ion-text>
+          <ion-button>
+            <b>Quantity: 02</b>
+          </ion-button>
+        </ion-item>
+  
+        <ion-item>
+          <ion-thumbnail slot="start">
+            <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/thumbnail.svg" />
+          </ion-thumbnail>
+          <ion-label>Lettuce</ion-label>
+          <ion-text size="large"><b>₱ 90 &nbsp;</b></ion-text>
+          <ion-button>
+            <b>Quantity: 04</b>
+          </ion-button>
+        </ion-item>
+  
+        <ion-item lines="none">
+          <ion-thumbnail slot="start">
+            <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/thumbnail.svg" />
+          </ion-thumbnail>
+          <ion-label>Banana</ion-label>
+          <ion-text size="large"><b>₱ 100 &nbsp;</b></ion-text>
+          <ion-button>
+            <b>Quantity: 01</b>
+          </ion-button>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
   </ion-card>
+  <ion-card>
+    <ion-card-content>
+      <ion-item>
+        <ion-text>Total: </ion-text>
+        
+      <ion-text size="large" slot="end">
+        <b>₱ 1,000 &nbsp;</b>
+      </ion-text>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-button expand="full" color="success" href="/checkout" style="margin-left: 70%; margin-right: 10px;">Checkout</ion-button>
+
 </ion-col>
 </ion-row>
 </ion-content>
