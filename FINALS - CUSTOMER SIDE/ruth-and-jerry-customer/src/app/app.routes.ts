@@ -52,5 +52,9 @@ export const routes: Routes = [
   {
     path: 'orderhistory',
     loadComponent: () => import('./orderhistory/orderhistory.page').then( m => m.OrderhistoryPage)
+  },  {
+    path: 'rnj-store',
+    loadComponent: () => import('./rnj-store/rnj-store.page').then( m => m.RnjStorePage)
   },
+
 ];

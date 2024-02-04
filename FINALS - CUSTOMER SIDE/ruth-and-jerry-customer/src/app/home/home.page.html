@@ -1,7 +1,7 @@
 <ion-header [translucent]="true" >
   <ion-toolbar>
     <ion-buttons slot="secondary">
-      <ion-button color="success" href="/home" >Home</ion-button>
+      <ion-button color="success" href="/cart" ><ion-icon name="cart-outline"></ion-icon></ion-button>
     </ion-buttons>
     <ion-buttons slot="primary">
       <ion-button color="success" href="/profile">Profile </ion-button>
@@ -13,7 +13,6 @@
       </ion-button>
     </ion-buttons>
 
-    <ion-title color="success" style="font-weight: bold;font-family: 'Raleway',sans-serif;" >Home</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -42,20 +41,18 @@
   </ion-row>
 <ion-row>
   <ion-col>
-    <ion-card>
       <ion-searchbar color="success" placeholder="Search by Name or Category"></ion-searchbar>
-    </ion-card>
   </ion-col>
 </ion-row>
 <ion-col style="margin-left: auto; margin-right: auto; margin-top: 20px;">
 <ion-row>
 <ion-col>
-<ion-card color="success">
-  <img src="assets/logos/cart.svg" style="width: 50%; height: auto; display: block; margin: 0 auto;margin-top: 15px;" class="lower-image"/>
+<ion-card style="background-image: url('assets/vegetables/homebg.png'); ">
+  <img src="assets/icon/main_logoW.png" style="width: 55%; height: auto; display: block; margin: 0 auto;margin-top: 15px;" class="lower-image"/>
   <ion-row>
   <ion-col>  
-  <ion-buttons fill="clear" size="large" shape="round" color="success" class="ion-text-center"> <ion-button href="/cart"  
-    style="color: #ffffff;font-weight: bold;   font-family: 'Raleway', sans-serif; margin-left: auto; margin-right: auto;">My Cart</ion-button></ion-buttons>
+  <ion-buttons fill="clear" size="large" shape="round" color="success" class="ion-text-center"> <ion-button href="/rnj-store"  
+    style="color: #ffffff;font-weight: bold;   font-family: 'Raleway', sans-serif; margin-left: auto; margin-right: auto;">Store</ion-button></ion-buttons>
   </ion-col>
 </ion-row>
 </ion-card>
@@ -63,15 +60,43 @@
 
 <ion-col>
 <ion-card color="success">
-  <img src="assets/logos/pricetag.svg" style="width: 50%; height: auto; display: block; margin: 0 auto;margin-top: 15px;" class="lower-image"/>
+  <img src="assets/logos/cart.svg" style="width: 50%; height: auto; display: block; margin: 0 auto;margin-top: 15px;" class="lower-image"/>
   <ion-row>
   <ion-col>
-  <ion-buttons fill="clear" size="large" shape="round" color="success"><ion-button href="/orderhistory" 
-    style="color:#ffffff;font-weight: bold;font-family: 'Raleway',sans-serif; margin-left: auto; margin-right: auto;">Order History</ion-button></ion-buttons>
+  <ion-buttons fill="clear" size="large" shape="round" color="success"><ion-button href="/cart" 
+    style="color:#ffffff;font-weight: bold;font-family: 'Raleway',sans-serif; margin-left: auto; margin-right: auto;">Cart</ion-button></ion-buttons>
 </ion-col>
 </ion-row>
 </ion-card>
 </ion-col>
 </ion-row>
 </ion-col>
+
+<ion-col style="margin-left: auto; margin-right: auto; margin-top: 20px;">
+  <ion-row>
+  <ion-col>
+  <ion-card color="success">
+    <img src="assets/logos/receipt.png" style="width: 50%; height: auto; display: block; margin: 0 auto;margin-top: 15px;" class="lower-image"/>
+    <ion-row>
+    <ion-col>  
+    <ion-buttons fill="clear" size="large" shape="round" color="success" class="ion-text-center"> <ion-button href="/myreceipts"  
+      style="color: #ffffff;font-weight: bold;   font-family: 'Raleway', sans-serif; margin-left: auto; margin-right: auto;">My Receipts</ion-button></ion-buttons>
+    </ion-col>
+  </ion-row>
+  </ion-card>
+  </ion-col>
+  
+  <ion-col>
+  <ion-card color="success">
+    <img src="assets/logos/pricetag.svg" style="width: 50%; height: auto; display: block; margin: 0 auto;margin-top: 15px;" class="lower-image"/>
+    <ion-row>
+    <ion-col>
+    <ion-buttons fill="clear" size="large" shape="round" color="success"><ion-button href="/orderhistory" 
+      style="color:#ffffff;font-weight: bold;font-family: 'Raleway',sans-serif; margin-left: auto; margin-right: auto;">Order History</ion-button></ion-buttons>
+  </ion-col>
+  </ion-row>
+  </ion-card>
+  </ion-col>
+  </ion-row>
+  </ion-col>
 </ion-content>

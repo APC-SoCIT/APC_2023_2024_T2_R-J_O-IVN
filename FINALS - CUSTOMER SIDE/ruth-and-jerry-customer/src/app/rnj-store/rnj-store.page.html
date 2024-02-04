@@ -1,0 +1,139 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button fill="clear"size="large" color="success" href="/home">
+        <ion-icon name="caret-back-outline"></ion-icon>
+            </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="secondary">
+      <ion-button color="success" href="/cart" ><ion-icon name="cart-outline"></ion-icon></ion-button>
+    </ion-buttons>
+    <ion-buttons slot="secondary">
+      <ion-button color="success" href="/home" >Home</ion-button>
+    </ion-buttons>
+    <ion-buttons slot="primary">
+      <ion-button color="success" href="/profile">Profile </ion-button>
+    </ion-buttons>
+
+    <ion-buttons slot="end">
+      <ion-button  size="large" color="success" href="/settings">
+        <ion-icon name="settings-sharp"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+    <ion-title color="success" style="font-weight: bold;font-family: 'Raleway',sans-serif;" >Store</ion-title>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">rnj-store</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+
+    <ion-card style="background-image: url('assets/vegetables/homebg.png'); width:auto;height: 20%; margin-top: 50px;">
+      <ion-title class="ion-text-center" style="font-size: 32px;font-family: 'Raleway',sans-serif;font-weight: bold;color: #fff;margin-top: 10%;">R & J STORE</ion-title>
+    </ion-card>
+  
+    <ion-searchbar color="success" placeholder="Search by Name or Category"></ion-searchbar>
+  
+   <ion-card-content>
+    <ion-card>
+      <ion-row>
+        <ion-col>
+          <ion-card-title style="font-weight: bold;margin-left: 5%;font-size: 28px;">Carrots</ion-card-title>
+          <img src="assets/vegetables/carrots.png" style="width: 70%; height: auto;"/>  
+        </ion-col>
+        <ion-col>
+          <ion-card-title class="ion-text-right" style="font-weight: bold;font-size: 42px;margin-top: 15%;">₱ 75</ion-card-title>  
+          <ion-title class="ion-text-right" fill="outline" color="success" style="font-weight: bold;font-size: 24px;">/1 kg</ion-title>
+        </ion-col>
+          <ion-col>
+            <ion-button  fill="clear" style="margin-left:  30%;" >
+              <ion-icon  size="large" color="success" name="add-outline"></ion-icon>
+            </ion-button>
+            <ion-title class="ion-text-center" style="margin-left: 5px;">2</ion-title>
+            <ion-button fill="clear" style="margin-left: 30%;">
+              <ion-icon Size="large" color="danger" name="remove-outline"></ion-icon>
+            </ion-button> 
+        </ion-col>
+      </ion-row>
+    </ion-card>
+
+    <ion-card>
+      <ion-row>
+        <ion-col>
+          <ion-card-title style="font-weight: bold;margin-left: 5%;font-size: 28px;">Tomato</ion-card-title>
+          <img src="assets/vegetables/tomatoes.png" style="width: 70%; height: auto;"/>  
+        </ion-col>
+        <ion-col>
+          <ion-card-title class="ion-text-right" style="font-weight: bold;font-size: 42px;margin-top: 15%;">₱ 85</ion-card-title>  
+          <ion-title class="ion-text-right" fill="outline" color="success" style="font-weight: bold;font-size: 24px;">/1 kg</ion-title>
+        </ion-col>
+          <ion-col>
+            <ion-button  fill="clear" style="margin-left:  30%;" >
+              <ion-icon  size="large" color="success" name="add-outline"></ion-icon>
+            </ion-button>
+            <ion-title class="ion-text-center" style="margin-left: 5px;">2</ion-title>
+            <ion-button fill="clear" style="margin-left: 30%;">
+              <ion-icon Size="large" color="danger" name="remove-outline"></ion-icon>
+            </ion-button>
+            
+        </ion-col>
+      </ion-row>
+    </ion-card>
+
+    <ion-card>
+      <ion-row>
+        <ion-col>
+          <ion-card-title style="font-weight: bold;margin-left: 5%;font-size: 28px;">Banana</ion-card-title>
+          <img src="assets/vegetables/banana.png" style="width: 70%; height: auto;"/>  
+        </ion-col>
+        <ion-col>
+          <ion-card-title class="ion-text-right" style="font-weight: bold;font-size: 42px;margin-top: 15%;">₱ 100</ion-card-title>  
+          <ion-title class="ion-text-right" fill="outline" color="success" style="font-weight: bold;font-size: 24px;">/1 kg</ion-title>
+        </ion-col>
+          <ion-col>
+            <ion-button  fill="clear" style="margin-left:  30%;" >
+              <ion-icon  size="large" color="success" name="add-outline"></ion-icon>
+            </ion-button>
+            <ion-title class="ion-text-center" style="margin-left: 5px;">1</ion-title>
+            <ion-button fill="clear" style="margin-left: 30%;">
+              <ion-icon Size="large" color="danger" name="remove-outline"></ion-icon>
+            </ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-card>
+
+    <ion-card>
+      <ion-row>
+        <ion-col>
+          <ion-card-title style="font-weight: bold;margin-left: 5%;font-size: 28px;">Lettuce</ion-card-title>
+          <img src="assets/vegetables/lettuce.png" style="width: 70%; height: auto;"/>  
+        </ion-col>
+        <ion-col>
+          <ion-card-title class="ion-text-right" style="font-weight: bold;font-size: 42px;margin-top: 15%;">₱ 90</ion-card-title>  
+          <ion-title class="ion-text-right" fill="outline" color="success" style="font-weight: bold;font-size: 24px;">/1 kg</ion-title>
+        </ion-col>
+          <ion-col>
+            <ion-button  fill="clear" style="margin-left:  30%;" >
+              <ion-icon  size="large" color="success" name="add-outline"></ion-icon>
+            </ion-button>
+            <ion-title class="ion-text-center" style="margin-left: 5px;">4</ion-title>
+            <ion-button fill="clear" style="margin-left: 30%;">
+              <ion-icon Size="large" color="danger" name="remove-outline"></ion-icon>
+            </ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-card>
+
+  <ion-row>
+    <ion-col></ion-col>
+    <ion-col> <ion-button color="success" href="/cart">Proceed to Checkout</ion-button></ion-col>
+  </ion-row>
+
+   </ion-card-content>
+</ion-content>
