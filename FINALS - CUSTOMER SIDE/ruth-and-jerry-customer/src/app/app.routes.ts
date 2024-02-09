@@ -38,10 +38,6 @@ export const routes: Routes = [
     loadComponent: () => import('./cart/cart.page').then( m => m.CartPage)
   },
   {
-    path: 'inventory',
-    loadComponent: () => import('./inventory/inventory.page').then( m => m.InventoryPage)
-  },
-  {
     path: 'myreceipts',
     loadComponent: () => import('./myreceipts/myreceipts.page').then( m => m.MyreceiptsPage)
   },
@@ -52,7 +48,8 @@ export const routes: Routes = [
   {
     path: 'orderhistory',
     loadComponent: () => import('./orderhistory/orderhistory.page').then( m => m.OrderhistoryPage)
-  },  {
+  },
+  {
     path: 'rnj-store',
     loadComponent: () => import('./rnj-store/rnj-store.page').then( m => m.RnjStorePage)
   },
