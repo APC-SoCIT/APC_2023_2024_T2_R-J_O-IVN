@@ -1,0 +1,26 @@
+case 'GET':
+    // Handle GET requests
+    if (isset($_GET['action']) && $_GET['action'] === 'getOrderHistory') {
+        // Get order history from the database
+        $result = mysqli_query($conn, "SELECT * FROM orders");
+
+        // Check if any orders found
+        if (mysqli_num_rows($result) > 0) {
+            $orderHistory = [];
+            while ($row = mysqli_fetch_assoc($result)) {
+                $orderHistory[] = $row;
+            }
+            // Output order history as JSON
+            header("Content-Type: application/json");
+            echo json_encode($orderHistory);
+        } else {
+            // No orders found
+            http_response_code(404);
+            echo json_encode(array("message" => "No orders found"));
+        }
+    } else {
+        // Invalid action
+        http_response_code(400);
+        echo json_encode(array("message" => "Invalid action"));
+    }
+    break;

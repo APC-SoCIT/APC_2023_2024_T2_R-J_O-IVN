@@ -1,0 +1,41 @@
+// Handle CORS
+header("Access-Control-Allow-Origin: *");
+header("Content-Type: application/json; charset=UTF-8");
+
+// Include database connection
+include_once 'config.php';
+
+// Handle HTTP requests
+switch ($_SERVER['REQUEST_METHOD']) {
+    case 'GET':
+        // Handle GET requests
+        if (isset($_GET['action'])) {
+            if ($_GET['action'] === 'getInventory') {
+                // Get inventory data
+                $result = mysqli_query($conn, "SELECT * FROM inventory");
+                $rows = [];
+                while ($row = mysqli_fetch_assoc($result)) {
+                    $rows[] = $row;
+                }
+                echo json_encode($rows);
+            } elseif ($_GET['action'] === 'getOrders') {
+                // Get orders data
+                $result = mysqli_query($conn, "SELECT * FROM orders");
+                $rows = [];
+                while ($row = mysqli_fetch_assoc($result)) {
+                    $rows[] = $row;
+                }
+                echo json_encode($rows);
+            }
+        }
+        break;
+    case 'POST':
+        // Handle POST requests
+        // Add logic for handling orders, updating inventory, etc.
+        break;
+    default:
+        // Unsupported HTTP method
+        http_response_code(405);
+        echo json_encode(array("message" => "Method Not Allowed"));
+        break;
+}

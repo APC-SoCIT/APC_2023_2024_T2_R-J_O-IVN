@@ -1,0 +1,52 @@
+switch ($_SERVER['REQUEST_METHOD']) {
+    case 'GET':
+        // Handle GET requests (retrieve user profile)
+        if (isset($_GET['action']) && $_GET['action'] === 'getUserProfile') {
+            // Example: Retrieve user profile
+            // Logic to retrieve user profile information (example)
+            $userProfile = array(/* retrieved user profile data */);
+
+            // Return user profile as JSON
+            echo json_encode($userProfile);
+        } else {
+            // Invalid action
+            http_response_code(400);
+            echo json_encode(array("message" => "Invalid action"));
+        }
+        break;
+    case 'PUT':
+        // Handle PUT requests (update user profile)
+        if (isset($_POST['action']) && $_POST['action'] === 'updateUserProfile') {
+            // Example: Update user profile
+            // Logic to update user profile information (example)
+            // You would typically update the user profile in the database
+
+            // Return success response
+            echo json_encode(array("message" => "User profile updated successfully"));
+        } else {
+            // Invalid action
+            http_response_code(400);
+            echo json_encode(array("message" => "Invalid action"));
+        }
+        break;
+    case 'DELETE':
+        // Handle DELETE requests (delete user account)
+        if (isset($_POST['action']) && $_POST['action'] === 'deleteUserAccount') {
+            // Example: Delete user account
+            // Logic to delete user account (example)
+            // You would typically delete the user account from the database
+
+            // Return success response
+            echo json_encode(array("message" => "User account deleted successfully"));
+        } else {
+            // Invalid action
+            http_response_code(400);
+            echo json_encode(array("message" => "Invalid action"));
+        }
+        break;
+    default:
+        // Unsupported HTTP method
+        http_response_code(405);
+        echo json_encode(array("message" => "Method Not Allowed"));
+        break;
+}

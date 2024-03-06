@@ -1,0 +1,48 @@
+switch ($_SERVER['REQUEST_METHOD']) {
+    case 'POST':
+        // Handle POST requests (add item to cart)
+        if (isset($_POST['action']) && $_POST['action'] === 'addItemToCart') {
+            // Example: Add item to cart
+            $itemId = $_POST['itemId'];
+            $quantity = $_POST['quantity'];
+
+            // Logic to add item to cart (example)
+            // You would typically add the item to the database or session
+
+            // Return success response
+            echo json_encode(array("message" => "Item added to cart successfully"));
+        } else {
+            // Invalid action
+            http_response_code(400);
+            echo json_encode(array("message" => "Invalid action"));
+        }
+        break;
+    case 'PUT':
+        // Handle PUT requests (update item in cart)
+        // Similar to POST, but update the item instead of adding it
+        break;
+    case 'DELETE':
+        // Handle DELETE requests (remove item from cart)
+        // Similar to POST, but remove the item instead of adding it
+        break;
+    case 'GET':
+        // Handle GET requests (retrieve cart contents)
+        if (isset($_GET['action']) && $_GET['action'] === 'getCartContents') {
+            // Example: Retrieve cart contents
+            // Logic to retrieve cart contents (example)
+            $cartContents = array(/* retrieved cart contents */);
+
+            // Return cart contents as JSON
+            echo json_encode($cartContents);
+        } else {
+            // Invalid action
+            http_response_code(400);
+            echo json_encode(array("message" => "Invalid action"));
+        }
+        break;
+    default:
+        // Unsupported HTTP method
+        http_response_code(405);
+        echo json_encode(array("message" => "Method Not Allowed"));
+        break;
+}

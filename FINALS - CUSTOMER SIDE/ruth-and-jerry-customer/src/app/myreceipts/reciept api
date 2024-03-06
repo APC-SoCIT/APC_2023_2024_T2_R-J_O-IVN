@@ -1,0 +1,24 @@
+case 'POST':
+    // Handle POST requests
+    if (isset($_POST['action']) && $_POST['action'] === 'generateReceipt') {
+        // Example: Generate receipt for order
+        $orderId = $_POST['orderId'];
+
+        // Retrieve order details from the database
+        $orderResult = mysqli_query($conn, "SELECT * FROM orders WHERE id = $orderId");
+        $order = mysqli_fetch_assoc($orderResult);
+
+        // Process order details and generate receipt (example)
+        $receiptContent = "Order ID: " . $order['id'] . "\n";
+        $receiptContent .= "Customer Name: " . $order['customer_name'] . "\n";
+        $receiptContent .= "Total Price: " . $order['total_price'] . "\n";
+
+        // Output generated receipt
+        header("Content-Type: application/json");
+        echo json_encode(array("receiptContent" => $receiptContent));
+    } else {
+        // Invalid action
+        http_response_code(400);
+        echo json_encode(array("message" => "Invalid action"));
+    }
+    break;
