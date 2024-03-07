@@ -11,7 +11,7 @@
   },
   "Properties": {
     "AppCreationSource": "AppFromFigma",
-    "AppDescription": "",
+    "AppDescription": "R&J mobile application is an ordering and inventory management system for the client (Ruth and Jerry).",
     "AppPreviewFlagsMap": {
       "aibuilderserviceenrollment": false,
       "allowmultiplescreensincanvaspages": false,
@@ -128,7 +128,7 @@
     "AppName": "OMG",
     "BackgroundColor": "RGBA(54,176,75,1)",
     "IconColor": "RGBA(255,255,255,1)",
-    "IconName": "FavoriteStarFill",
+    "IconName": "",
     "LogoFileName": "logo.jpg",
     "PublishDataLocally": false,
     "PublishResourcesLocally": false,
