@@ -1,0 +1,404 @@
+"'PRODUCT DETAILS' As screen":
+    LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
+
+    Rectangle2_8 As rectangle:
+        DisabledFill: =Rectangle2_8.Fill
+        Fill: =RGBA(27, 116, 25, 1)
+        Height: =180
+        HoverFill: =Rectangle2_8.Fill
+        PressedFill: =Rectangle2_8.Fill
+        TabIndex: =0
+        Width: =640
+        ZIndex: =1
+
+    Label2_1 As label:
+        Align: =Align.Center
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        Color: =RGBA(255, 255, 255, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FocusedBorderThickness: =4
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        Height: =70
+        Size: =30
+        Text: |-
+            ="Product Details
+            "
+        Width: =560
+        X: =40
+        Y: =55
+        ZIndex: =2
+
+    Icon8_2 As icon.BackArrow:
+        BorderColor: =RGBA(149, 149, 149, 1)
+        Color: =RGBA(255, 255, 255, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(220, 220, 220, 1)
+        DisabledFill: =RGBA(0, 0, 0, 0)
+        FocusedBorderThickness: =4
+        Height: =60
+        HoverBorderColor: =RGBA(0, 0, 0, 0)
+        HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        HoverFill: =RGBA(0, 0, 0, 0)
+        Icon: =Icon.BackArrow
+        OnSelect: =Back(ScreenTransition.Cover)
+        PressedBorderColor: =RGBA(0, 0, 0, 0)
+        PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        PressedFill: =RGBA(0, 0, 0, 0)
+        X: =34
+        Y: =64
+        ZIndex: =3
+
+    Rectangle2_13 As rectangle:
+        DisabledFill: =Rectangle2_13.Fill
+        Fill: =RGBA(240,240,240,1)
+        Height: =281.80767587515026
+        HoverFill: =Rectangle2_13.Fill
+        PressedFill: =Rectangle2_13.Fill
+        TabIndex: =0
+        Width: =640
+        Y: =180
+        ZIndex: =4
+
+    Image1 As image:
+        BorderColor: =RGBA(99, 139, 44, 1)
+        BorderThickness: =1
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledFill: =RGBA(0, 0, 0, 0)
+        FocusedBorderThickness: =4
+        Height: =206
+        HoverBorderColor: =RGBA(0, 0, 0, 0)
+        HoverFill: =RGBA(0, 0, 0, 0)
+        Image: =First(productrecord).'Product Image'
+        PressedBorderColor: =RGBA(0, 0, 0, 0)
+        PressedFill: =RGBA(0, 0, 0, 0)
+        RadiusBottomLeft: =5
+        RadiusBottomRight: =5
+        RadiusTopLeft: =5
+        RadiusTopRight: =5
+        Width: =204
+        X: =34
+        Y: =217
+        ZIndex: =5
+
+    Label6 As label:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        Color: =RGBA(51, 51, 51, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FocusedBorderThickness: =4
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Bold
+        Height: =70
+        Size: =26
+        Text: =First(productrecord).product_name
+        Width: =351
+        X: =272
+        Y: =217
+        ZIndex: =6
+
+    Label6_1 As label:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        Color: =RGBA(51, 51, 51, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FocusedBorderThickness: =4
+        Font: =Font.'Segoe UI'
+        Height: =89
+        Size: =20
+        Text: =First(productrecord).product_description
+        Width: =349
+        X: =274
+        Y: =285
+        ZIndex: =7
+
+    TextBox1_31 As label:
+        Align: =TextPosition.Left
+        Color: =RGBA(47, 47, 47, 1)
+        DisabledColor: =ColorFade(RGBA(47, 41, 43, 1), 70%)
+        Font: =Font.Lato
+        Height: =56
+        HoverBorderColor: =TextBox1_31.BorderColor
+        HoverColor: =TextBox1_31.Color
+        HoverFill: =TextBox1_31.Fill
+        PressedBorderColor: =TextBox1_31.BorderColor
+        PressedColor: =TextBox1_31.Color
+        PressedFill: =TextBox1_31.Fill
+        Size: =30
+        Text: ="Inventory level"
+        VerticalAlign: =VerticalAlign.Top
+        Width: =290
+        X: =34
+        Y: =489
+        ZIndex: =9
+
+    Rectangle2_18 As rectangle:
+        BorderColor: =RGBA(179, 179, 179, 1)
+        BorderThickness: =2
+        DisabledFill: =Rectangle2_18.Fill
+        Fill: =RGBA(240,240,240,1)
+        Height: =141.82694655198315
+        HoverFill: =Rectangle2_18.Fill
+        PressedFill: =Rectangle2_18.Fill
+        TabIndex: =0
+        Width: =570.5000305175782
+        X: =35
+        Y: =561
+        ZIndex: =10
+
+    Label8_2 As label:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        Color: =RGBA(51, 51, 51, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FocusedBorderThickness: =4
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        Height: =70
+        Size: =21
+        Text: =First(productrecord).product_stock
+        Width: =224
+        X: =60
+        Y: =572
+        ZIndex: =11
+
+    Label6_2 As label:
+        Align: =Align.Center
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        Color: =RGBA(255, 255, 255, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        Fill: |
+            =Switch(
+                Label6_2.Text,
+                "High", Color.Green,
+                "Medium", Color.YellowGreen,
+                "Low", Color.Red,
+                "Out of Stock", Color.Black
+            )
+        FocusedBorderThickness: =4
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        Height: =32
+        Size: =12
+        Text: |-
+            =If(
+                (First(productrecord).product_stock / First(productrecord).product_reccStock) >= 0.80, 
+                "High",
+                (First(productrecord).product_stock / First(productrecord).product_reccStock) >= 0.5 && 
+                (First(productrecord).product_stock / First(productrecord).product_reccStock) <= 0.80,
+                "Medium",
+                (First(productrecord).product_stock / First(productrecord).product_reccStock) >= 0.01 && 
+                (First(productrecord).product_stock / First(productrecord).product_reccStock) <= 0.5,
+                "Low",
+                "Out of Stock"
+            )
+        Width: =120
+        X: =485
+        Y: =501
+        ZIndex: =12
+
+    Label8_3 As label:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        Color: =RGBA(51, 51, 51, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FocusedBorderThickness: =4
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        Height: =70
+        Size: =21
+        Text: =First(productrecord).product_reccStock
+        Width: =224
+        X: =324
+        Y: =572
+        ZIndex: =13
+
+    Label8_6 As label:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        Color: =RGBA(153, 153, 153, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FocusedBorderThickness: =4
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        Height: =70
+        Size: =21
+        Text: ="Current Stock"
+        Width: =224
+        X: =60
+        Y: =632
+        ZIndex: =14
+
+    Label8_7 As label:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        Color: =RGBA(153, 153, 153, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FocusedBorderThickness: =4
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        Height: =70
+        Size: =21
+        Text: ="Ideal Stock"
+        Width: =224
+        X: =325
+        Y: =632
+        ZIndex: =15
+
+    TextBox1_32 As label:
+        Align: =TextPosition.Left
+        Color: =RGBA(47, 47, 47, 1)
+        DisabledColor: =ColorFade(RGBA(47, 41, 43, 1), 70%)
+        Font: =Font.Lato
+        Height: =56
+        HoverBorderColor: =TextBox1_32.BorderColor
+        HoverColor: =TextBox1_32.Color
+        HoverFill: =TextBox1_32.Fill
+        PressedBorderColor: =TextBox1_32.BorderColor
+        PressedColor: =TextBox1_32.Color
+        PressedFill: =TextBox1_32.Fill
+        Size: =30
+        Text: ="Order Quantity"
+        VerticalAlign: =VerticalAlign.Top
+        Width: =290
+        X: =40
+        Y: =718
+        ZIndex: =16
+
+    TextInput3 As text:
+        BorderColor: =RGBA(166, 166, 166, 1)
+        BorderThickness: =2
+        Color: =RGBA(51, 51, 51, 1)
+        Default: =Value(Label8_3.Text-Label8_2.Text)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        FocusedBorderThickness: =4
+        Font: =Font.'Segoe UI'
+        Height: =70
+        HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        HoverColor: =RGBA(51, 51, 51, 1)
+        HoverFill: =RGBA(255, 255, 255, 1)
+        PressedBorderColor: =RGBA(0, 120, 212, 1)
+        PressedColor: =RGBA(51, 51, 51, 1)
+        PressedFill: =RGBA(255, 255, 255, 1)
+        RadiusBottomLeft: =50
+        RadiusBottomRight: =50
+        RadiusTopLeft: =50
+        RadiusTopRight: =50
+        Size: =21
+        Width: =565
+        X: =35
+        Y: =794
+        ZIndex: =19
+
+    Button2 As button:
+        BorderColor: =RGBA(187, 221, 140, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Fill: =RGBA(27, 116, 25, 1)
+        FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        Height: =83
+        HoverBorderColor: =RGBA(0, 0, 0, 0)
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
+        OnSelect: |-
+            =Patch(product,LookUp(product,ID=First(productrecord).ID),{product_stock:Value(TextInput3.Text+Label8_2.Text)});Navigate(PRODUCTINVENTORYSCREEN,ScreenTransition.Fade)
+        PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
+        PressedColor: =RGBA(255, 255, 255, 1)
+        PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        RadiusBottomLeft: =50
+        RadiusBottomRight: =50
+        RadiusTopLeft: =50
+        RadiusTopRight: =50
+        Size: =24
+        Text: ="Restock"
+        Width: =420
+        X: =110
+        Y: =980
+        ZIndex: =20
+
+    Icon7 As icon.Edit:
+        BorderColor: =RGBA(166, 166, 166, 1)
+        Color: =RGBA(255, 255, 255, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(220, 220, 220, 1)
+        DisabledFill: =RGBA(0, 0, 0, 0)
+        FocusedBorderThickness: =4
+        HoverBorderColor: =RGBA(0, 0, 0, 0)
+        HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        HoverFill: =RGBA(0, 0, 0, 0)
+        Icon: =Icon.Edit
+        OnSelect: =Navigate(PRODUCTDETAILSEDIT);
+        PressedBorderColor: =RGBA(0, 0, 0, 0)
+        PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        PressedFill: =RGBA(0, 0, 0, 0)
+        X: =530
+        Y: =55
+        ZIndex: =21
+
+    Group5 As group:
+        Height: =5
+        Width: =5
+        X: =80
+        Y: =80
+        ZIndex: =24
+
+        Label6_3 As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(27, 116, 25, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Bold
+            Height: =64
+            Italic: =true
+            Size: =30
+            Text: =First(productrecord).product_price
+            Width: =207
+            X: =321
+            Y: =374
+            ZIndex: =22
+
+        Label7 As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Bold
+            Height: =64
+            Size: =33
+            Text: ="₱"
+            Width: =128
+            X: =272
+            Y: =374
+            ZIndex: =23
+

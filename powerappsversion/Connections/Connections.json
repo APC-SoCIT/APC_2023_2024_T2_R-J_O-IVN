@@ -1,0 +1,71 @@
+{
+  "5e09419b-16d1-475f-90f2-0ac91652604e": {
+    "appActions": [
+      "providers/PowerPlatform.Governance/Operations/Read",
+      "providers/PowerPlatform.Governance/Operations/Write"
+    ],
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "SharePoint",
+      "iconUri": "https://connectoricons-prod.azureedge.net/u/alexsp/sporelease/1.0.1682.3673/sharepointonline/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_sharepointonline",
+      "parameterHints": {},
+      "parameterHintsV2": {}
+    },
+    "datasets": {
+      "https://asiapacificcollege-my.sharepoint.com/personal/kealtea_student_apc_edu_ph/": {
+        "dataSources": {
+          "product": {
+            "tableName": "273ed19c-e71c-474f-a5ee-bed3ad834964"
+          },
+          "users": {
+            "tableName": "9624a792-dffc-40b7-a4d0-cb50a7957814"
+          }
+        }
+      }
+    },
+    "dataSources": [
+      "users",
+      "product"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "5e09419b-16d1-475f-90f2-0ac91652604e"
+  },
+  "cd7c868e-cbee-41a9-a570-aa5b50662e04": {
+    "appActions": [],
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "Office 365 Outlook",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1676/1.0.1676.3617/office365/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_office365",
+      "parameterHints": {},
+      "parameterHintsV2": {}
+    },
+    "datasets": {},
+    "dataSources": [
+      "Office365Outlook"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "cd7c868e-cbee-41a9-a570-aa5b50662e04"
+  },
+  "f2766e1e-7de3-4a20-b6c6-a906e708eeac": {
+    "appActions": [],
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "Office 365 Users",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1672/1.0.1672.3545/office365users/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_office365users",
+      "parameterHints": {},
+      "parameterHintsV2": {}
+    },
+    "datasets": {},
+    "dataSources": [
+      "Office365Users"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "f2766e1e-7de3-4a20-b6c6-a906e708eeac"
+  }
+}

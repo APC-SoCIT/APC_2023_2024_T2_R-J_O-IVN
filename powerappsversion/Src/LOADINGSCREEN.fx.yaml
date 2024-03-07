@@ -1,0 +1,73 @@
+LOADINGSCREEN As screen:
+    LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
+
+    Timer2 As timer:
+        AutoStart: =true
+        BorderColor: =RGBA(0, 120, 212, 1)
+        BorderStyle: =BorderStyle.None
+        DisabledBorderColor: =RGBA(244, 244, 244, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Duration: =5000
+        Fill: =RGBA(255, 255, 255, 1)
+        Font: =Font.'Segoe UI'
+        Height: =0
+        HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -10%)
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
+        OnTimerEnd: |
+            =If(CurrentUser.Roles = "customer", 
+                Navigate(HOMESCREEN_CUSTOMER, ScreenTransition.Fade),
+                Navigate(HOMESCREEN_ADMIN, ScreenTransition.Fade));
+            Refresh(users);
+            Set(LoggedInOrg, Blank());
+            Set(SignUpOrg, Blank());
+            Reset(login_email);
+            Reset(login_password);
+        PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        PressedColor: =RGBA(255, 255, 255, 1)
+        PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        Size: =21
+        Width: =0
+        X: =40
+        Y: =40
+        ZIndex: =1
+
+    tomatoe As image:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledFill: =RGBA(0, 0, 0, 0)
+        FocusedBorderThickness: =4
+        Height: =205
+        HoverBorderColor: =RGBA(0, 0, 0, 0)
+        HoverFill: =RGBA(0, 0, 0, 0)
+        Image: =faf42de3788d6477aa632d71d67ad4eb
+        PressedBorderColor: =RGBA(0, 0, 0, 0)
+        PressedFill: =RGBA(0, 0, 0, 0)
+        Width: =235
+        X: =196
+        Y: =426
+        ZIndex: =3
+
+    "'loading...' As label":
+        Align: =Align.Center
+        AutoHeight: =true
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        Color: =RGBA(27, 116, 25, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FocusedBorderThickness: =4
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        Height: =161
+        Size: =35
+        Text: ="Loading..."
+        Width: =497
+        X: =78
+        Y: =631
+        ZIndex: =4
+

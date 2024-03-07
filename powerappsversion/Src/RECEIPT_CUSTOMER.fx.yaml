@@ -1,0 +1,249 @@
+RECEIPT_CUSTOMER As screen:
+    LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
+
+    Rectangle2_9 As rectangle:
+        DisabledFill: =Rectangle2_9.Fill
+        Fill: =RGBA(27, 116, 25, 1)
+        Height: =125
+        HoverFill: =Rectangle2_9.Fill
+        PressedFill: =Rectangle2_9.Fill
+        TabIndex: =0
+        Width: =640
+        ZIndex: =1
+
+    Icon8_4 As icon.BackArrow:
+        BorderColor: =RGBA(149, 149, 149, 1)
+        Color: =RGBA(255, 255, 255, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(220, 220, 220, 1)
+        DisabledFill: =RGBA(0, 0, 0, 0)
+        FocusedBorderThickness: =4
+        Height: =60
+        HoverBorderColor: =RGBA(0, 0, 0, 0)
+        HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        HoverFill: =RGBA(0, 0, 0, 0)
+        Icon: =Icon.BackArrow
+        OnSelect: =Back(ScreenTransition.Cover)
+        PressedBorderColor: =RGBA(0, 0, 0, 0)
+        PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        PressedFill: =RGBA(0, 0, 0, 0)
+        Tooltip: =
+        X: =36
+        Y: =30
+        ZIndex: =2
+
+    Label2_2 As label:
+        Align: =Align.Center
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        Color: =RGBA(255, 255, 255, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FocusedBorderThickness: =4
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        Height: =70
+        Size: =30
+        Text: |-
+            ="Receipt
+            "
+        Width: =363
+        X: =138
+        Y: =25
+        ZIndex: =3
+
+    Label2 As label:
+        Align: =Align.Center
+        BorderColor: =RGBA(141, 198, 63, 1)
+        BorderThickness: =3
+        Color: =RGBA(51, 51, 51, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FocusedBorderThickness: =4
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Bold
+        Height: =70
+        Size: =21
+        Text: |-
+            ="Order No. # AA2024"
+        Width: =560
+        X: =39
+        Y: =161
+        ZIndex: =4
+
+    Label2_3 As label:
+        Align: =Align.Center
+        BorderColor: =RGBA(141, 198, 63, 1)
+        BorderThickness: =3
+        Color: =RGBA(51, 51, 51, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FocusedBorderThickness: =4
+        Font: =Font.'Segoe UI'
+        Height: =498
+        Size: =21
+        Text: =""
+        Width: =560
+        X: =40
+        Y: =265
+        ZIndex: =5
+
+    Button4 As button:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Fill: =RGBA(141, 198, 63, 1)
+        FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Bold
+        Height: =78
+        HoverBorderColor: =RGBA(0, 0, 0, 0)
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
+        PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
+        PressedColor: =RGBA(255, 255, 255, 1)
+        PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        RadiusBottomLeft: =50
+        RadiusBottomRight: =50
+        RadiusTopLeft: =50
+        RadiusTopRight: =50
+        Size: =24
+        Text: ="DOWNLOAD A COPY"
+        Width: =388
+        X: =125
+        Y: =1019
+        ZIndex: =6
+
+    Label4 As label:
+        Align: =Align.Center
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        Color: =RGBA(153, 153, 153, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FocusedBorderThickness: =4
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        Height: =70
+        Size: =21
+        Text: |-
+            ="February 14, 2024 at 9:30PM"
+        Width: =560
+        X: =40
+        Y: =265
+        ZIndex: =7
+
+    Label2_4 As label:
+        Align: =Align.Center
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderThickness: =3
+        Color: =RGBA(51, 51, 51, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FocusedBorderThickness: =4
+        Font: =Font.'Segoe UI'
+        Height: =251
+        Size: =21
+        Text: |-
+            ="
+            LIST HERE WITH QUANTITY AND PRICES
+            
+            "
+        Width: =560
+        X: =42
+        Y: =335
+        ZIndex: =8
+
+    Label2_5 As label:
+        Align: =Align.Center
+        BorderColor: =RGBA(141, 198, 63, 1)
+        BorderThickness: =3
+        Color: =RGBA(51, 51, 51, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FocusedBorderThickness: =4
+        Font: =Font.'Segoe UI'
+        Height: =208
+        Size: =21
+        Text: =""
+        Width: =560
+        X: =40
+        Y: =776
+        ZIndex: =9
+
+    Label2_6 As label:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderThickness: =3
+        Color: =RGBA(51, 51, 51, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FocusedBorderThickness: =4
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Bold
+        Height: =61
+        Size: =21
+        Text: |-
+            ="TOTAL: "
+        Width: =378
+        X: =67
+        Y: =702
+        ZIndex: =10
+
+    Label2_7 As label:
+        Align: =Align.Right
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderThickness: =3
+        Color: =RGBA(51, 51, 51, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FocusedBorderThickness: =4
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Bold
+        Height: =61
+        Size: =21
+        Text: ="5K"
+        Width: =378
+        X: =201
+        Y: =702
+        ZIndex: =11
+
+    Label2_8 As label:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderThickness: =3
+        Color: =RGBA(51, 51, 51, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FocusedBorderThickness: =4
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Bold
+        Height: =61
+        Size: =21
+        Text: |-
+            ="Delivery Address:"
+        Width: =134
+        X: =67
+        Y: =849
+        ZIndex: =12
+
+    Label2_9 As label:
+        Align: =Align.Right
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderThickness: =3
+        Color: =RGBA(51, 51, 51, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FocusedBorderThickness: =4
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        Height: =117
+        Size: =21
+        Text: |
+            =CurrentUser.Address
+        Width: =345
+        X: =217
+        Y: =821
+        ZIndex: =13
+
